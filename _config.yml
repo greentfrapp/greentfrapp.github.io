@@ -24,7 +24,7 @@ github_username:  greentfrapp
 
 # Build settings
 markdown: kramdown
-theme: modernist
+theme: minimal
 gems:
   - jekyll-feed
 exclude:
