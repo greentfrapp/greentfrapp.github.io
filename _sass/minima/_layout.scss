@@ -120,6 +120,9 @@
   list-style: none;
   margin-left: 0;
 }
+.social-media-list li {
+  display: inline-block;
+}
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
