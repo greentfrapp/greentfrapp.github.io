@@ -5,7 +5,6 @@
 	flex: 1;
 	display: block;
 	font-family: 'Open Sans', sans-serif;
-	color: #2c3e50;
 }
 
 .fm-wrapper {
@@ -32,4 +31,21 @@
 .fm-content {
 	display: inline-block;
 	width: 70%;
+}
+
+@include media-query($on-palm) {
+	.frontmatter img#logo {
+		width: 50%;
+		vertical-align: top;
+		display: inline-block;
+		margin: 0 20px;
+	}
+}
+
+hr {
+	width: whatever;
+	margin: 10px auto;
+	height: 32px;
+	background: #fff url(/assets/hr.svg) no-repeat scroll center;
+	border: 0;
 }

@@ -37,8 +37,9 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $brand-color;
     line-height: $base-line-height;
+    @include relative-font-size(1.2);
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {

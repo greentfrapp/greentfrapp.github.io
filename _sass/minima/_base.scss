@@ -97,6 +97,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
+h1 {
+  font-weight: 600;
+  @include relative-font-size(2.5);
+  color: $header-color;
+}
+
 
 
 /**
@@ -107,11 +113,11 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 10%);
   }
 
   &:hover {
-    color: $text-color;
+    color: $header-color;
     text-decoration: underline;
   }
 
@@ -151,7 +157,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: #fff8f8;
 }
 
 code {
