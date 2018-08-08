@@ -117,8 +117,8 @@ a {
   }
 
   &:hover {
-    color: $header-color;
-    text-decoration: underline;
+    color: lighten($brand-color, 10%);
+    text-decoration: none;
   }
 
   .social-media-list &:hover {
