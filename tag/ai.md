@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-tag: social
+tag: ai
 robots: noindex
 ---
