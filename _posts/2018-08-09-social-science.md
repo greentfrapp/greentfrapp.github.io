@@ -7,18 +7,18 @@ tags: social ai commentary
 comments: True
 ---
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Fair point that can just as easily, and more urgently, be inverted: why don&#39;t those building AI for $subject actually engage with the foundational $subject literature? Including the histories of ethics, discrimination, etc in $subject domain... <a href="https://t.co/SPkSBCxWzz">https://t.co/SPkSBCxWzz</a></p>&mdash; Meredith Whittaker (@mer__edith) <a href="https://twitter.com/mer__edith/status/998211595879833602?ref_src=twsrc%5Etfw">May 20, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <div class='note note-right'>
 	This post marks my transition from a full-time AI researcher to a full-time urban science student. When I wrote my response to the 'What attracted you to this program?' question in the application form for the course, I was surprised to find that I had many thoughts about the mixing of the 'hard' and 'soft' sciences. Here is what I might have written had I not been afraid of overwhelming the admissions committee with a potential long-form essay. I figure it will also be fun to look back on this post and see what has changed after finishing my urban science course.
 </div>
+
+<blockquote class="twitter-tweet" data-lang="en" style='margin:auto;'><p lang="en" dir="ltr">Fair point that can just as easily, and more urgently, be inverted: why don&#39;t those building AI for $subject actually engage with the foundational $subject literature? Including the histories of ethics, discrimination, etc in $subject domain... <a href="https://t.co/SPkSBCxWzz">https://t.co/SPkSBCxWzz</a></p>&mdash; Meredith Whittaker (@mer__edith) <a href="https://twitter.com/mer__edith/status/998211595879833602?ref_src=twsrc%5Etfw">May 20, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 As a student, I used to find the term **social science** oxymoronic. Not that I felt either humanities or sciences were inferior to the other, but that I thought the two were mutually exclusive. I enjoyed my share of visual arts, literature and cinematography, as well as a healthy dose of math and science - staples of the Singaporean student. Recurrent words, symbols and themes in literature, the mise-en-scène, cuts and pacing in cinematography - these invoke raw feelings that do not necessarily have to be dissected to be impactful. On the other hand, math and science classes taught calculus, geometry, reactions and patterns and trends, dictated by gradients and formulas and rules (I must say that I fully agree with Paul Lockhart's [A Mathematician's Lament](https://www.mimuw.edu.pl/~pawelst/rzut_oka/Zajecia_dla_MISH_2011-12/Lektury_files/LockhartsLament.pdf)!). 
 
 One of the books that changed my mind about this was Poor Economics by Abhijit Banerjee and Esther Duflo. 
 
-<div class='note-left'>
+<div class='note note-left'>
 	Here's a [link](https://www.youtube.com/watch?v=0zvrGiPkVcs) to the TED talk by Esther Duflo on Poor Economics.
 </div>
 
@@ -40,7 +40,7 @@ My second motivation relates to my dream of using AI for social good. For instan
 
 AI looks to be the driving force for at least the next decade. AI engineers and experts are in high demand and low supply. But perhaps, more importantly, we need AI engineers who can also play the role of urban planner, AI experts who are also human experts and society experts.
 
-<div class='note-right'>
+<div class='note note-right'>
 	Zachary C. Lipton is an assistant professor at Carnegie Mellon University who started the Approximately Correct [blog](http://approximatelycorrect.com/) as a counter against overwhelming AI hyperbole and false hype in mainstream media.
 </div>
 
