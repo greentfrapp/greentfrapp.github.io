@@ -7,6 +7,8 @@ tags: social ai commentary
 comments: True
 ---
 
+#### Draft version
+
 <div class='note note-right'>
 	This post marks my transition from a full-time AI researcher to a full-time urban science student. When I wrote my response to the 'What attracted you to this program?' question in the application form for the course, I was surprised to find that I had many thoughts about the mixing of the 'hard' and 'soft' sciences. Here is what I might have written had I not been afraid of overwhelming the admissions committee with a potential long-form essay. I figure it will also be fun to look back on this post and see what has changed after finishing my urban science course.
 </div>
