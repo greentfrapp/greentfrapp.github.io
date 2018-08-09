@@ -42,7 +42,7 @@ Instead of the apocalyptic fears of Skynet and Roko's Basilisk, I am primarily c
 
 Below I list several issues with AI in the social context. These range in order from AI-specific challenges to problems that accompany any major technological shift. Even amongst the class of major technological shifts (steam, electricity, internet), AI is relatively unique in its cultural baggage and the extent and speed of its pervasiveness.
 
-## 1. Bias Propagation
+#### 1. Bias Propagation
 
 News abound of bias inherited by algorithms!
 
@@ -83,21 +83,21 @@ In particular, *bias* seems analagous to wrong predictions - we often consider b
 
 In the language model example, suppose a model predicts the male pronoun as more likely given that the preceding words mention 'lawyer'. Such a model will have made a wrong prediction if the 'lawyer' in question was referenced using the female pronoun in the true text. But here's the caveat, suppose it is true that lawyers are more often male than female. Then is the algorithm wrong in predicting a male pronoun with a higher probability?
 
-## 2. Blackbox Decisions
+#### 2. Blackbox Decisions
 
-## 3. Privacy
+#### 3. Privacy
 
-## 4. Weaponization
+#### 4. Weaponization
 
-## 5. Media Hyperbole and Misinformation
+#### 5. Media Hyperbole and Misinformation
 
 <div class='note note-right'>
 	Check out <a href='http://approximatelycorrect.com/'>Approximately Correct</a>! It's a blog started by Zachary C. Lipton, an assistant professor at Carnegie Mellon University, as a counter against overwhelming AI hyperbole and false hype in mainstream media.
 </div>
 
-**6. Inequality**
+#### 6. Inequality
 
-**7. Playing Catch-up**
+#### 7. Playing Catch-up
 
 My second motivation relates to my dream of using AI for social good. For instance, a team from MIT previously developed software for detecting and counting roofs from satellite images, for the purpose of estimating appropriate sites for microgrids and other infrastructure initiatives. On the same note, earlier this year, as part of a submission to a humanitarian aid and disaster relief app competition, I adapted an algorithm to detect flooded regions and structural damage from satellite images. 
 
