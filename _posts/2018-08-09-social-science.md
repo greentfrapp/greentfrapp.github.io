@@ -19,7 +19,7 @@ As a student, I used to find the term **social science** oxymoronic. Not that I 
 One of the books that changed my mind about this was Poor Economics by Abhijit Banerjee and Esther Duflo. 
 
 <div class='note note-left'>
-	Here's a [link](https://www.youtube.com/watch?v=0zvrGiPkVcs) to the TED talk by Esther Duflo on Poor Economics.
+	Here's a <a href='https://www.youtube.com/watch?v=0zvrGiPkVcs'>link</a> to the TED talk by Esther Duflo on Poor Economics.
 </div>
 
 A primary theme of the book was the use of Randomized Controlled Trials (RCTs) for understanding the effects of aid measures on the poor. RCTs have been traditionally employed for clinical and scientific trials. But here Banerjee and Duflo demonstrated that RCTs could be used to shed light on the 'soft' psychological factors influencing the success of aid measures. It was fascinating to see how traditional scientific techniques and sociological investigations could be complementary.
@@ -41,7 +41,7 @@ My second motivation relates to my dream of using AI for social good. For instan
 AI looks to be the driving force for at least the next decade. AI engineers and experts are in high demand and low supply. But perhaps, more importantly, we need AI engineers who can also play the role of urban planner, AI experts who are also human experts and society experts.
 
 <div class='note note-right'>
-	Zachary C. Lipton is an assistant professor at Carnegie Mellon University who started the Approximately Correct [blog](http://approximatelycorrect.com/) as a counter against overwhelming AI hyperbole and false hype in mainstream media.
+	Check out <a href='http://approximatelycorrect.com/'>Approximately Correct</a>! It's a blog started by Zachary C. Lipton, an assistant professor at Carnegie Mellon University, as a counter against overwhelming AI hyperbole and false hype in mainstream media.
 </div>
 
 
