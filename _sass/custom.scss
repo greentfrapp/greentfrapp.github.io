@@ -28,6 +28,7 @@
 .fm-content {
 	display: inline-block;
 	width: 70%;
+	padding-bottom: 0;
 	@include media-query($on-laptop) {
 		width: 100%;
 	}
