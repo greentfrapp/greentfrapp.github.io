@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Ubuntu+Mono|Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Ubuntu+Mono|Lato|Cambo|Libre+Baskerville');
 
 .frontmatter {
 	font-family: 'Open Sans', sans-serif;
@@ -100,4 +100,9 @@ div.note {
 		border-radius: 3px;
 		overflow: hidden;
 	}
+}
+
+span.math {
+	@include relative-font-size(1.2);
+	font-family: Libre-Baskerville, serif;
 }
