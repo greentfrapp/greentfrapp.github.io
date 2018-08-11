@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Immediate Dangers of AI"
+title:  "Immediate Dangers of AI (Draft)"
 subtitle: "A list of short-term AI-related problems."
-date:   2017-08-09
+date:   2017-08-12
 tags: social ai commentary long
 comments: True
 ---
