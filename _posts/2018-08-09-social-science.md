@@ -1,36 +1,17 @@
 ---
 layout: post
-title:  "AI and Social Science"
-subtitle: "Thoughts as an AI researcher venturing into the humanities."
+title:  "Immediate Dangers of AI"
+subtitle: "A list of short-term AI-related problems."
 date:   2017-08-09
-tags: social ai commentary
+tags: social ai commentary long
 comments: True
 ---
 
 #### Draft version
 
 <div class='note note-left'>
-	This post marks my transition from a full-time AI researcher to a full-time urban science student. When I wrote my response to the 'What attracted you to this program?' question in the application form for the course, I was surprised to find that I had many thoughts about the mixing of the 'hard' and 'soft' sciences. Here is what I might have written had I not been afraid of overwhelming the admissions committee with a potential long-form essay. I figure it will also be fun to look back on this post and see what has changed after finishing my urban science course.
+	As AI plays a larger role in society, ethical concerns have started to come into the forefront. A great example is the ICML 2018 Best Paper being awarded to Delayed Impact of Fair Machine Learning by Liu et al. ([2018](https://arxiv.org/abs/1803.04383)). Check out the blog post [here](http://bair.berkeley.edu/blog/2018/05/17/delayed-impact/)!
 </div>
-
-<blockquote class="twitter-tweet" data-lang="en" style='margin:auto;'><p lang="en" dir="ltr">Fair point that can just as easily, and more urgently, be inverted: why don&#39;t those building AI for $subject actually engage with the foundational $subject literature? Including the histories of ethics, discrimination, etc in $subject domain... <a href="https://t.co/SPkSBCxWzz">https://t.co/SPkSBCxWzz</a></p>&mdash; Meredith Whittaker (@mer__edith) <a href="https://twitter.com/mer__edith/status/998211595879833602?ref_src=twsrc%5Etfw">May 20, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
----
-
-I used to find the term **social science** oxymoronic. Not that I felt either humanities or sciences were inferior to the other, but that I thought the two were mutually exclusive. I enjoyed my share of visual arts, literature and cinematography, as well as a healthy dose of math and science (staples of the Singaporean education). 
-
-Recurrent words, symbols and themes in literature, the mise-en-scène, cuts and pacing in cinematography - these invoke raw feelings that do not necessarily have to be dissected to be impactful. On the other hand, math and science classes taught calculus, geometry, reactions and patterns and trends, dictated by gradients and formulas and rules (although I must say that I fully agree with Paul Lockhart's [A Mathematician's Lament](https://www.mimuw.edu.pl/~pawelst/rzut_oka/Zajecia_dla_MISH_2011-12/Lektury_files/LockhartsLament.pdf)!). 
-
-One of the books that changed my mind about this was Poor Economics by Abhijit Banerjee and Esther Duflo. 
-
-<div class='note note-left'>
-	Here's a <a href='https://www.youtube.com/watch?v=0zvrGiPkVcs'>link</a> to the TED talk by Esther Duflo on Poor Economics.
-</div>
-
-A primary theme of the book was the use of Randomized Controlled Trials (RCTs) for understanding the effects of aid measures on the poor. RCTs have been traditionally employed for clinical and scientific trials. But Banerjee and Duflo demonstrated that RCTs could be used to shed light on the 'soft' psychological factors influencing the success of aid measures. It was fascinating to see how traditional scientific techniques and sociological investigations could be complementary.
-
----
 
 Today, **artificial intelligence** is such a buzzword that I feel somewhat guilty for being an AI researcher. Yet, with all the money pouring into AI, there seems to be a lack of interdisciplinary practitioners who can bridge the gap between humanities and the latest technology developments. 
 
@@ -55,7 +36,7 @@ Humans tend to accumulate bias in two ways - inculcation or first-hand experienc
 First-hand experience is relatively straightforward - particularly memorable events that cause the formation of personal stereotypes. A trivial example might include how certain names might sound particularly obnoxious or humble or fat or thin or tall or short, despite common sense telling us that names should have no effect on a person's characteristics. 
 
 <div class='note note-left'>
-	Actually, <a href='https://www.newyorker.com/tech/elements/why-your-name-matters'>name-signalling</a> is actually a well-documented phenomenon, which shows that, surprisingly, names <i>do</i> have some effect on personal characteristics. Ironically, these effects usually have their origins in human bias, kind of like a self-fulfilling prophecy.
+	Actually, <a href='https://www.newyorker.com/tech/elements/why-your-name-matters'>name-signalling</a> is actually a well-documented phenomenon, which means that, surprisingly, names <i>do</i> have some effect on personal characteristics. Ironically, these effects usually have their origins in human bias, kind of like a self-fulfilling prophecy.
 </div>
 
 When considering inculcation and upbringing, bias and discrimination can be propagated in families, tribes and cultures, through every aspect of everyday behavior - verbal teachings, gossip, nonverbal cues, songs, stories.
@@ -66,7 +47,7 @@ When considering inculcation and upbringing, bias and discrimination can be prop
 
 From the perspective of an AI researcher, both first-hand experience and upbringing form the training data of a human. Certain trends in the data surface themselves as biases in the human. 
 
-In a similar manner, training data provided to algorithms can result in biases being inherited by the algorithms. These biases will stem primarily from the humans that generated the data. 
+In a similar manner, training data provided to algorithms can result in biases being inherited by the algorithms. These biases will stem primarily from the humans that generated the data.
 
 **Just because it is not human does not mean it is fair and without bias.**
 
