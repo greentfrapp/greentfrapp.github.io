@@ -17,7 +17,7 @@ Recurrent words, symbols and themes in literature, the mise-en-scène, cuts and 
 
 One of the books that changed my mind about this was Poor Economics by Abhijit Banerjee and Esther Duflo. 
 
-<div class='note note-left'>
+<div class='note note-right'>
 	Here's a <a href='https://www.youtube.com/watch?v=0zvrGiPkVcs'>link</a> to the TED talk by Esther Duflo on Poor Economics.
 </div>
 
