@@ -2,7 +2,7 @@
 layout: post
 title:  "AI and Humanities"
 subtitle: "Thoughts as an AI researcher venturing into the humanities."
-date:   2017-08-11 00:00:01
+date:   2018-08-11 00:00:01
 tags: social ai commentary
 comments: True
 ---
