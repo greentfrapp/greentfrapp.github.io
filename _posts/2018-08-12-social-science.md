@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Immediate Dangers of AI (Draft)"
+title:  "Immediate Dangers of AI"
 subtitle: "A list of short-term AI-related problems."
 date:   2018-08-12
 tags: social ai commentary long
 comments: True
+draft: True
 ---
-
-#### Draft version
 
 <div class='note note-left'>
 	As AI plays a larger role in society, ethical concerns have started to come into the forefront. A great example is the ICML 2018 Best Paper being awarded to Delayed Impact of Fair Machine Learning by Liu et al. ([2018](https://arxiv.org/abs/1803.04383)). Check out the blog post [here](http://bair.berkeley.edu/blog/2018/05/17/delayed-impact/)!
