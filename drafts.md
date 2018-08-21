@@ -1,0 +1,4 @@
+---
+layout: drafts
+permalink: /drafts/
+---
