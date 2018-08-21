@@ -242,9 +242,13 @@
   font-size: 16px;
   line-height: 25.6px;
 
+  h1 {
+    line-height: 55px;
+  }
+
   h2 {
     @include relative-font-size(2);
-
+    line-height: 45px;
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
     }
@@ -252,7 +256,7 @@
 
   h3 {
     @include relative-font-size(1.625);
-
+    line-height: 40px;
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
     }
@@ -260,7 +264,7 @@
 
   h4 {
     @include relative-font-size(1.25);
-
+    line-height: 30px;
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
