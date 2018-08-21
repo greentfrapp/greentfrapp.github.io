@@ -68,7 +68,7 @@ Important things to consider
 
 ## Subdefinitions of Ethics and Corresponding Tasks
 
-Ethical behavior as utility-maximizing behavior
+**Ethical behavior as utility-maximizing behavior**
 - Maximizing utility/equality of multiagent environments
 Parallel to maximizing scores in games or more generally, optimizing a loss function.
 The more troublesome problem here is how do we extend such concepts to reality?
@@ -94,7 +94,7 @@ Alternatively, an ideal model might have learned/ingrained visual cues which it 
 - Official rules, punishments and rewards actually form a minority of human learning
 - The majority comes from implied visual/audio cues - expressions, body language and tone of voice - just like how dogs learn!
 
-Ethical behavior as empathetic behavior
+**Ethical behavior as empathetic behavior**
 - Pairing expressions with sentences - from movies?
 Whatever is hurtful to you, do not do to any other person.
 Do unto others as you would have them do unto you.
@@ -108,7 +108,7 @@ When you see someone crying, you empathize by placing yourself in their shoes an
 
 As such, we have the recurring theme of the importance of implied visual/audio cues.
 
-Ethical behavior as *normal* behavior
+**Ethical behavior as *normal* behavior**
 - Infering norms from events
 Unethical behavior in the above contexts may be 'ethical' because everyone else does it.
 
