@@ -64,23 +64,19 @@ Several tasks can then be conceived, grouped under classification and generation
 
 1. **Classification.** For every $$\alpha$$ cue, predict the correct $$\beta$$ cue out of $$N$$ options.
 \<EXAMPLE HERE> We might have five possible tasks - Video-Audio, Video-Text, Audio-Text, Image-Audio, Image-Text.
-2. **Generation.** Here the model is required to maximize the negative log likelihood of a cue, conditioned on other cues.
+2. **Generation.** Here the model is required to minimize the negative log likelihood of $$\alpha$$ cue, conditioned on $$\beta$$ cue. \<EXAMPLE HERE>
 
-
-## Ideas
-
-1. Predicting ethical score/class of statements
-2. EmpathyNet - matching sentences / tone of voice / expressions / actions
-
+For both tasks, there are several possible combinations of $$\alpha$$-$$\beta$$ \<TABLE HERE>.
 
 ## Success Factors of ImageNet
 
 Specific factors relevant to EthicsNet
 
-- Size
-- Annotation agreement / consistency
-- Domain distribution / scope
-- Metric
+- Size - The size of ImageNet is obviously an important factor in the success of image classification. On a side note, the size of ImageNet has also made it a target for solving the problem of efficiently training on large datasets. 
+- Annotation agreement / consistency - Image-wise it is relatively simpler to have good annotation agreement, as compared to the subjective nature of ethics. It is also important to see that the consistency lies in the labels and not in the dataset - consistency in labels and variety in dataset lead to generalization, whereas consistency in dataset and variety in labels lead to confusion.
+- Domain distribution / scope - Despite its size, ImageNet is a concrete and specific dataset with an arguably narrow scope. Every sample is a single image labeled with one of a thousand labels (1000 in the annual challenge; the actual ImageNet has over 20 000). *One thousand classes* sounds like a huge number but is tiny compared to the number of objects a human sees everyday. In limiting the dataset to one thousand classes, the image classification task becomes far more tractable.
+- Metric - ImageNet, being primarily a classification task, has a simple metric of accuracy. The accuracy has been subdivided into more elaborate metrics such as top-five-accuracy but these remain easily measured and understood. The concreteness of the metric for a task is of paramount importance since it defines the task and provides a goal for researchers to work towards.
+- Tasks - While it originated as a classification dataset, ImageNet has also served as the foundation for a wider variety of tasks, such as object (bounding box) detection and image generation (minimize negative log likelihood). The reason for this is debatable but can be attributed largely to reasons above, specifically the size of the dataset and the quality of the annotations.
 
 ## Other Relevant Datasets
 
