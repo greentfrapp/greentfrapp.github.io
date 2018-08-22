@@ -20,7 +20,7 @@ draft: True
 > 
 > We welcome entrepreneurs, researchers, scientists, students, and anyone eager to contribute, to jump into this challenge and to help propose a solution.
 
-</hr>
+---
 
 ## Contents
 
