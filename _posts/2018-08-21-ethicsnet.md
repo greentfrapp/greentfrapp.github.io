@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EthicsNet"
-subtitle: "Collecting an ethics dataset"
+subtitle: "EmpathyNet: A Green Paper"
 date:   2018-08-21 00:00:00
 tags: ai social
 comments: True
@@ -12,15 +12,59 @@ draft: True
 	This is adapted from my submission to the <a href='https://www.herox.com/EthicsNet'>EthicsNet Challenge</a> hosted on <a href='https://www.herox.com'>HeroX</a>. Disclaimer! I discovered the Challenge 4.5 days away from the deadline so the ideas here may not be too coherent.
 </div>
 
+*A green paper typically refers to a draft or tentative proposal with the intention of facilitating consultation and discussion.*
+
+> The EthicsNet Guardians' Challenge aims to enable kinder machines.
+> 
+> The Challenge seeks ideas on how to create the best possible set of examples of prosocial behaviour for AI to learn from (i.e. a machine learning dataset).
+> 
+> We welcome entrepreneurs, researchers, scientists, students, and anyone eager to contribute, to jump into this challenge and to help propose a solution.
+
+</hr>
+
 ## Contents
 
-1. Summary of Concrete Solutions
+1. Overview of EmpathyNet
 2. Review of Current Datasets
-	- Success Factors of ImageNet
-	- Other Related Datasets and Relevant Notes
+	1. Success Factors of ImageNet
+	2. Other Related Datasets and Relevant Notes
+	3. Possible Alternatives
 3. Context of Ethics
-4. How Solutions Build Up to Larger Goals
-5. How to Implement Solutions ie. Collect Data
+4. How EmpathyNet Builds Up to Larger Goals
+5. Building EmpathyNet
+
+We cut right to the chase by first giving a brief overview of the proposed solutions, before elaborating on how we arrive at the solutions. This begins with a detailed analysis of current datasets, with important lessons on success factors and potential pitfalls. Then we have a brief discussion on the context of ethics, which will provide specific motivations for the datasets. This then leads nicely to how the datasets contribute to these motivations and subsequently larger goals. Finally, we describe in detail how the solutions may be implemented in an efficient low-cost high-quality manner.
+
+## Overview of EmpathyNet
+
+In this green paper, we introduce EmpathyNet - a multimodal dataset that serves as the foundation for learning empathy. 
+
+In the context of ethics, empathy serves the dual purpose of motivation and teacher. Empathy motivates the construction of ethical values such as:
+
+> Do unto others as you would have them do unto you.
+
+Empathy also teaches - humans infer the likeability or normalcy of their actions from the responses of the people around them. For instance, children may infer that sharing is good from positive *vibes* given by their peers and parents. Such *vibes* include verbal language, body language, tone of voice and facial expression, with latter factors contributing more when verbal comprehension is inadequate. The ability to understand such *vibes* stem from a modicum of empathy, defined here as:
+
+> The ability to understand and share the feelings of another.
+
+Other animals, such as dogs and cats, have also exhibited the ability of empathy. Examples include the importance of tone of voice in training animals and the concept of emotional support animals. There are two important points here.
+
+1. The language barrier is near-unbreachable between humans and other animals. Yet both parties are able to convey extremely subtle messages, ranging from sorrow to anger to happiness. This might indicate that textual information is unnecessary for empathy, with a greater emphasis on body language, tone of voice and facial expression.
+2. As humans we do not know for sure if our animal companions truly *empathize* with us. Do they really know how our emotions feel like? Do they really *understand and share* our feelings? Without a device to transplant consciousness, we will probably never find out. But the important thing here is that, despite all that, many humans do feel that animals truly empathize. We firmly believe this based on our inference of superficial cues. This suggests that for artificial intelligence, demonstrating empathy might be far more crucial than truly possessing empathy.
+
+Based on these, the goal of EmpathyNet is to facilitate the assessment of demonstrations of empathy. This is primarily achieved by a series of tasks that test models' abilities to both match and generate cues. These tasks are facilitated by a multimodal dataset consisting of video, image and audio samples. Specifically, the dataset comprises cues, where a single cue contains a video subcue, with corresponding image, audio and text subcues.
+
+\<EXAMPLE HERE>
+
+In the example above, the video of a face is paired with a corresponding screencapture of the expression, audio clip and subtitle. As the example hints, existing movies and video platforms are a tremendous source of samples.
+
+**Important Note:** We might want to remove textual information from audio cues. This can be done by applying a form of blurring to the audio cues, so only nontextual information such as pitch and speed is retained.
+
+Several tasks can then be conceived, grouped under classification and generation.
+
+1. **Classification.** For every $$\alpha$$ cue, predict the correct $$\beta$$ cue out of $$N$$ options.
+\<EXAMPLE HERE> We might have five possible tasks - Video-Audio, Video-Text, Audio-Text, Image-Audio, Image-Text.
+2. **Generation.** Here the model is required to maximize the negative log likelihood of a cue, conditioned on other cues.
 
 
 ## Ideas
