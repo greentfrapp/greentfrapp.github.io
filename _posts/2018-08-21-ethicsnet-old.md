@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "EthicsNet"
+title:  "EthicsNet (Old)"
 subtitle: "EmpathyNet: A Green Paper"
 date:   2018-08-21 00:00:00
 tags: ai social
