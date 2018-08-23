@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "EthicsNet"
-subtitle: "EmpathyNet: A Green Paper"
+title:  "EmpathyNet"
+subtitle: "A Green Paper"
 date:   2018-08-21 00:00:00
 tags: ai social
 comments: True
@@ -10,7 +10,12 @@ mathjax: True
 ---
 
 <div class='note note-left'>
-	This is adapted from my submission to the <a href='https://www.herox.com/EthicsNet'>EthicsNet Challenge</a> hosted on <a href='https://www.herox.com'>HeroX</a>. Disclaimer! I discovered the Challenge 4.5 days away from the deadline so the ideas here may not be too coherent.
+	<p>
+		This is adapted from my submission to the <a href='https://www.herox.com/EthicsNet'>EthicsNet Challenge</a> hosted on <a href='https://www.herox.com'>HeroX</a>.
+	</p>
+	<p>
+		See my full submission <a href=''>here</a>!
+	</p>
 </div>
 
 *A green paper typically refers to a draft or tentative proposal with the intention of facilitating consultation and discussion.*
@@ -29,11 +34,11 @@ mathjax: True
 2. On Datasets
 	1. Success Factors of ImageNet
 	2. Other Relevant Datasets
-	3. Possible Alternatives
+	3. Possible Alternatives to EmpathyNet
 3. On Ethics
-	1. Ethical Behavior is Utility-maximizing Behavior
-	2. Ethical Behavior is Empathetic Behavior
-	3. Ethical Behavior is Normal Behavior
+	1. Ethical Behavior as Utility-maximizing Behavior
+	2. Ethical Behavior as Empathetic Behavior
+	3. Ethical Behavior as Normal Behavior
 4. Why EmpathyNet?
 	1. Multimodal
 	2. Inclusive
@@ -47,7 +52,7 @@ We first give a brief overview of our proposed solution, EmpathyNet. Thereafter 
 
 ## EmpathyNet
 
-In this green paper, we introduce EmpathyNet - a multimodal dataset that serves as the foundation for learning empathy (duh!). 
+In this green paper, we introduce EmpathyNet - a multimodal dataset that serves as the foundation for learning empathy. 
 
 We are conscious that the original problem statement from the EthicsNet Guardians' Challenge called for
 
@@ -67,10 +72,17 @@ Empathy also teaches. Humans infer the likeability or normalcy of their actions 
 
 Other animals, such as dogs and cats, have also exhibited empathy. Examples include the importance of tone of voice in training animals and the concept of emotional support animals. This illustrates two important points.
 
-1. The language barrier is near-unbreachable between humans and other animals. Yet both parties are able to convey extremely subtle messages, ranging from sorrow to anger to happiness. **This might indicate that textual information is unnecessary for empathy, with a greater emphasis on body language, tone of voice and facial expression.**
-2. As humans we do not know for sure if our animal companions truly *empathize* with us. Do they really know how our emotions feel like? Do they really *understand and share* our feelings? Without a device to transplant consciousness, we will probably never find out. But the important thing here is that, despite all that, many humans do feel that animals truly empathize. We firmly believe this based on our inference of superficial cues. **This suggests that for artificial intelligence, demonstrating empathy might be far more crucial than truly possessing empathy.**
+<div class='note note-right'>
+	Such as recounts of dogs looking embarrassed after making a mess and cats acting like royalty. 
+</div>
 
-Based on these observations, the goal of EmpathyNet is to facilitate the assessment of demonstrations of empathy using a multimodal dataset of cues, which we define here as:
+1. The language barrier is near-unbreachable between humans and other animals. Yet both parties are able to convey extremely subtle messages, ranging from sorrow to anger to happiness. **This might indicate that textual information is unnecessary for empathy, with a greater emphasis on body language, tone of voice and facial expression.**
+2. As humans we do not know for sure if our animal companions truly *empathize* with us. Do they really know how our emotions feel like? Do they really *understand and share* our feelings? Without a device to transplant consciousness, we will probably never find out.
+But many humans firmly believe that animals truly empathize, based on our inference of superficial cues. **This suggests that for artificial intelligence, demonstrating empathy might be far more crucial than truly possessing empathy.**
+
+Based on these observations, the goal of EmpathyNet is to facilitate the assessment of **demonstrations of empathy**. We adopt the term 'demonstrations of empathy' to indicate that we are concerned about outward manifestations of empathy such as recognition and generation of cues (see below). This is primarily because, as of time of writing, assessing true underlying empathy seems to be a debatable and intractable notion. Also, as mentioned above, demonstrating empathy might be far more crucial than truly possessing empathy.
+
+The heart of EmpathyNet is a multimodal dataset of **cues**, which we define here as:
 
 > A signal that conveys a feeling or thought.
 
@@ -87,19 +99,20 @@ We then assess demonstrations of empathy by a series of tasks involving recognit
 
 In the example above, the video of a face is paired with a corresponding screencapture of the expression, audio clip and subtitle. As the example hints, existing movies, documentaries and video platforms are a tremendous source of samples.
 
-**Important Note:** We might want to remove textual information from audio cues. This can be done by applying a form of blurring to the audio cues, so only nontextual information such as pitch and speed is retained.
+**Important Note:** We might want to remove textual information from audio cues. This can be done by applying a form of blurring to the audio cues, so only nontextual information, such as pitch and speed, is retained.
 
 Several tasks can then be conceived, grouped under classification and generation.
 
-1. **Classification.** For every $$\alpha$$ cue, predict the correct $$\beta$$ cue out of $$N$$ options.
-\<EXAMPLE HERE> We might have five possible tasks - Video-Audio, Video-Text, Audio-Text, Image-Audio, Image-Text.
-2. **Generation.** Here the model is required to minimize the negative log likelihood of $$\alpha$$ cue, conditioned on $$\beta$$ cue. \<EXAMPLE HERE>
+1. **Classification.** Predict the correct $$\alpha$$ cue out of $$N$$ options, conditioned on a $$\beta$$ cue. \<EXAMPLE HERE>
+2. **Generation.** Minimize the negative log likelihood of an $$\alpha$$ cue, conditioned on a $$\beta$$ cue. \<EXAMPLE HERE>
 
 For both tasks, there are several possible combinations of $$\alpha$$-$$\beta$$.
 
 \<TABLE HERE>
 
-## Success Factors of ImageNet
+## On Datasets
+
+### Success Factors of ImageNet
 
 Specific factors relevant to EthicsNet
 
@@ -111,13 +124,13 @@ Specific factors relevant to EthicsNet
 
 Aside from the dataset, the success and popularity of ImageNet can also be attributed to enthusiastic reception and participation of the annual ImageNet Large Scale Visual Recognition Challenge (ILSVRC). [This](https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/) insightful Quartz article touches on several important factors that have led to this success, such as the collaboration with PASCAL VOC and the AlexNet entry in 2012.
 
-## Other Relevant Datasets
+### Other Relevant Datasets
 
 There are many great datasets that have contributed to machine learning research eg. VQA ([Agrawal et al., 2015](https://arxiv.org/abs/1505.00468)), CLEVR ([Johnson et al., 2016](https://arxiv.org/abs/1612.06890)), SQuAD ([Rajpurkar et al., 2016](https://arxiv.org/abs/1606.05250)), YouTube-8M ([Abu-El-Haija, 2016](https://arxiv.org/abs/1609.08675)). Below we highlight some interesting datasets with important takeaways.
 
 **Procedurally Generated Matrices (PGM).**
 
-\<IMAGE>
+\<IMAGE HERE>
 
 *At its heart, PGM is a multiple-choice-question (MCQ) test. Given the context panels (top eight), select the correct answer panel (bottom eight).*
 
@@ -125,80 +138,82 @@ This is a dataset introduced by a DeepMind research team, which is meant to meas
 
 For example, the most basic regime is the `Neutral` regime, where the training and test splits are randomly sampled and mutually exclusive, with no other constraints. This is a normal training-test split in regular datasets. Contrast this with the `Held-out Shape-Colour` regime, where the training set does not contain any example with a certain shape (eg. square) and colour (black), while the test set will contain examples with this predefined shape and colour. This regime specifically tests if the model is able to extrapolate learned patterns to unseen shapes and colours.
 
-More importantly, experimental results by DeepMind shows that such specific constraints are extremely important. For the `Neutral` regime, their model had a generalization error ($$\text{ValidationAccuracy} - \text{TestAccuracy}$$) of $$-0.6%$$. For the `Held-out Shape-Colour` regime, the generalization error dropped to $$-46.6%$$. The systematic documentation of such trends is only possible due to the variety of constraints available in the dataset.
+More importantly, experimental results by DeepMind shows that such specific constraints are extremely important. For the `Neutral` regime, their model had a generalization error (ValidationAccuracy - TestAccuracy) of -0.6%. For the `Held-out Shape-Colour` regime, the generalization error dropped to -46.6%. The discovery and documentation of such trends is only possible due to the variety of constraints available in the dataset.
 
-## Possible Alternatives to EmpathyNet
+### Possible Alternatives to EmpathyNet
 
 In evolving the concept of EmpathyNet, we have considered a few other possibilities. Ultimately we have chosen to propose EmpathyNet, but we list some possibilities here to serve as inspiration and provide more food for thought.
 
-**EthicalText.** Humans are able to read a piece of short text (eg. sentence or paragraph) and decide if the text is describing ethical behavior. We can test for such ethical reasoning with a dataset of text samples, where each sample has a binary label indicating if the text is describing ethical behavior or concepts. (The label could also be a discrete or continuous score.) An effective way to do this is to go to sites such as the r/MadeMeSmile or r/UpliftingNews subreddits and extract the titles, marking them as ethical. Neutral samples can be obtained from regular subreddits eg. r/Showerthoughts or r/puns. Nonethical samples can be obtained from subreddits such as r/UnethicalLifeProTips.
+#### EthicalText
 
-`Drawbacks` If a model performs well on such a task, we might consider it a text classifier rather than having learned any semblance of ethics. A successful model might be similar to a spam classifier, just in a different domain. Such a model is also probably inherently brittle, unable to accurately classify text with unseen vocabulary. In contrast, ethics feels more multimodal in nature, not just correlated with certain word frequencies. One way to think about it - if we replace every word in the vocabulary of the dataset with a random word eg. replace *help* with *giraffe*. The model will still be able to perform equally well.
+Humans are able to read a piece of short text and decide if the text is describing ethical behavior eg.
 
-**SimsNet V1.** A nice readily available simulation environment with human characters is the Sims franchise. Using a Sims game or something similar, we can set up certain scenarios and allow the machine to control a single character. This can be in the form of reinforcement learning ie. the machine controls the character and then tries to maximize a certain utility score. This can also be in the form of a regular dataset eg. with machine predicting the best immediate action to take in a single scenario, out of four options. Such a dataset appeals to a more *universal* concept of ethics, beyond textual information. 
+> Shelter provides dogs with big comfy chairs.
 
-`Drawbacks` Such a dataset is actually essentially the same as any game dataset eg. Arcade Learning Environment (Atari) or OpenAI's gym and gym-retro. In all cases there is an environment and a score. Designing a model that is able to decide the best action for maximizing a score is the traditional reinforcement learning problem. Instead, the more important problem in the context of ethics is, "How can we design a reward function that maximizes ethical behavior?" Another way of phrasing it might be, "How can we infer such a score from observing the behavior of people?"
+*Taken from r/MadeMeSmile.*
 
-**SimsNet V2.** In natural language processing, there is a concept known as language modeling. For instance, given the entire Shakespeare corpus, we can train a model to predict the next word, conditioned on the previous five words. Interestingly, researchers have extended this concept to show that trained models demonstrate some semblance of understanding and even commonsense reasoning. Likewise in computer vision, a type of generative algorithm, known as autoregressive generation, trains a model to generate the next pixel, conditioned on previous pixels. Images generated pixel-by-pixel in such a manner actually generate fully coherent images. In a similar manner, there might be a dataset containing Sims scenarios showing ethical behavior. An autoregressive model trained on such a dataset might be able to predict the next action given previous context, thereby learning a model of ethical behavior.
+We can test for such ethical reasoning with a dataset of text samples, where each sample has a binary label indicating if the text is describing ethical behavior or concepts. (The label could also be a discrete or continuous score.) A low-cost way to do this is to refer to sites such as the r/MadeMeSmile or r/UpliftingNews subreddits and extract post titles, marking them as ethical. Neutral samples can be obtained from regular subreddits eg. r/Showerthoughts or r/puns. Nonethical samples can be obtained from subreddits such as r/UnethicalLifeProTips.
 
-`Drawbacks` One consideration is that the input provided to the model should be a form of API for the Sims-like environment (eg. a set of discrete actions) rather than pixel values. It will be challenging for a model to have to generate entire images for predictions - resource-wise. Such a challenge distracts from the true goal of EthicsNet. This then means that it is difficult to obtain a massive amount of data. Since we are constrained to having some form of API for the action space, we cannot use cheaper alternatives such as clips from movies and videos. Finally, context is a significant factor in making ethical decisions. We will have to consider how to embed contextual information into the samples. For example, if the scenario is Alfred hitting Bob, where the context might be self-defence or robbery or playful banter. How can we embed such contextual information without straightforwardedly disclosing the answer (of whether it is ethical behavior)? It will also be challenging to provide context for each sample in an efficient effective manner that is scaleable for the EthicsNet organizers.
+**Drawbacks.** If a model performs well on such a task, we might consider it a text classifier rather than having learned any semblance of ethics. A successful model might be similar to a spam classifier, just in a different domain. Such a model is also probably inherently brittle, unable to accurately classify text with unseen vocabulary. Also, ethics feels inherently multimodal, not just correlated with certain word frequencies or sequences. One way to think about it - replace every word in the vocabulary of the dataset with a random word eg. replace *help* with *giraffe*. The model will still be able to perform equally well, which feels counterintuitive.
+
+#### SimsNet V1
+
+A nice readily available simulation environment with human characters is the Sims franchise. Using a Sims game or something similar, we can set up certain scenarios and allow the machine to control a single character. This can be in the form of reinforcement learning eg. the machine controls the character and then tries to maximize a certain utility score. This can also be in the form of a regular dataset eg. with machine predicting the best immediate action to take in a single scenario, out of four options. Such a dataset appeals to a more language-independent concept of ethics, beyond textual information. 
+
+**Drawbacks.** Such a dataset is actually essentially the same as any game dataset eg. Arcade Learning Environment (Atari) or OpenAI's gym and gym-retro. In all cases there is an environment and a score. Designing a model that is able to decide the best action for maximizing a score is the traditional reinforcement learning problem. Instead, the more important problem in the context of ethics is, "How can we design a reward function that maximizes ethical behavior?" Another way of phrasing it might be, "How can we infer such a score from observing the behavior of people?"
+
+#### SimsNet V2
+
+In natural language processing, there is a concept known as language modeling. For instance, given the entire Shakespeare corpus, we can train a model to predict the next word, conditioned on the previous five words. Interestingly, researchers have extended this concept to show that trained models demonstrate some semblance of understanding and even commonsense reasoning. Likewise in computer vision, a type of generative algorithm, known as autoregressive generation, trains a model to generate the next pixel, conditioned on previous pixels. Images generated pixel-by-pixel in such a manner actually generate fully coherent images. In a similar manner, there might be a dataset containing Sims scenarios showing ethical behavior. An autoregressive model trained on such a dataset might be able to predict the next action given previous context, thereby learning a model of ethical behavior.
+
+**Drawbacks.** One consideration is that the input provided to the model should be a form of API for the Sims-like environment (eg. a set of discrete actions) rather than pixel values. It will be challenging for a model to have to generate entire images for predictions - resource-wise. Such a challenge distracts from the true goal of EthicsNet. This then means that it is difficult to obtain a massive amount of data. Since we are constrained to having some form of API for the action space, we cannot use cheaper alternatives such as clips from movies and videos. Finally, context is a significant factor in making ethical decisions. We will have to consider how to embed contextual information into the samples. For example, if the scenario is Alfred hitting Bob, the context might be self-defence or robbery or playful banter, with the ethicality varying widely based on the context. How can we embed such contextual information without straightforwardedly disclosing the answer (of whether it is ethical behavior)? It will also be challenging to provide context for each sample in an efficient effective manner that is scaleable for the EthicsNet organizers.
+
+\<EXAMPLE HERE>
 
 ## Ethics
 
-> This dataset is not designed to answer difficult philosophical questions. This dataset is designed to be a description of pro-social (nice, polite, socially welcomed) behaviours, especially generally universal ones.
->
-> The imagined goal is to create a system that can make simple social decisions that one might expect of a well-raised young human child or dog. We want to capture simple social rules like the following: 
-- It’s not nice to stare at people.
-- If you see trash lying around and you aren’t doing anything particularly time sensitive, pick it up and put it in a wastebin.
-- If you see someone accidentally drop something (e.g. their wallet), alert them, and return it.
+The primary purpose of this section is to discuss factors underlying ethical behavior, in order to shed light on how we can motivate AI to adopt such ethical behavior.
 
-**Ethical behavior as utility-maximizing behavior**
-- Maximizing utility/equality of multiagent environments
-Parallel to maximizing scores in games or more generally, optimizing a loss function.
-The more troublesome problem here is how do we extend such concepts to reality?
-- How do we measure utility?
-	- In some sense it is a subjective concept - as an example, someone who is used to a wealthy life will lose more utility if bankrupt, as compared to someone who is used to a poor life
-	- It is a hidden state - utility needs to be infered or estimated from superficial observations, which leads to the next definition
-- How should we define the score?
-	- Maximizing utility might lead to persistent inequality
-	- Short-term and long-term tradeoffs eg. killing off unhappy people
-These are important intractable questions yet humans are arguably able to make and use an estimation/inference of local utility/score in order to define somewhat ethical decisions.
-eg. killing a human for money is unethical - we do not have to ask how much money or quantify a baby's worth
-The utility inference and score maximization is implicit and as such is unique and subjective.
+### Ethical Behavior as Utility-maximizing Behavior
 
-As humans, we recognize that, to a large extent, everyone's concept of ethics is unique, subjective and self-derived.
-What is important is that:
-- Most of our concepts are aligned
+In ethical conundrums such as the trolley problem, utility-maximization is an important motivation in ethical decisions. For instance, if forced to make a decision, killing one human is better than killing two humans, assuming all humans are equal, since we maximize utility. In reality, utility maximization is a fluffy notion, with a host of problems that must be answered before we can attempt any form of maximization. 
+
+- How do we define utility? (Maximizing utility trivially might lead to inequality; should equality count towards utility?)
+- How do we measure or infer utility based only on superficial observations?
+- How do we tradeoff short-term and long-term utility? (Discount factor in reinforcement learning)
+- How to we perform utility algebra? (eg. killing a baby for money is unethical - we do not have to ask how much money or quantify a baby's worth; yet it cannot be said that a baby's life is worth infinite value, especially when we compare it to another human)
+
+These are important intractable questions yet humans are arguably able to make and use an estimation/inference of local utility/score in order to define somewhat ethical decisions. As humans, we recognize that, to a large extent, everyone's concept of ethics is unique, subjective and self-derived.
+What is important (for societal stability) is that:
+- Most of our values are aligned
 - Minor misalignments are compromised
-- Major misalignments are debated
+- Major misalignments are debated and reduced to one of the above
 
-Likewise, rather than specifying a set of ethical rules or an ethical metric, it might be better for such metrics to be learned, perhaps in the manner of inverse reinforcement learning.
+A huge contributing factor to the relative success of the above approach is a human's ability to infer supervisory signals (ie. labels) for their actions based on the cues of those around them. Accidentally pushing someone might cause mild annoyed responses, while deliberately punching someone might cause more violent responses. Most humans recognize that the former is of lower intensity and that both are undesirable for our innate reward function.
 
-Alternatively, an ideal model might have learned/ingrained visual cues which it use as metrics, just like humans!
-- Official rules, punishments and rewards actually form a minority of human learning
-- The majority comes from implied visual/audio cues - expressions, body language and tone of voice - just like how dogs learn!
+A similar case can be made for dogs, cats and other animals, which are trained and tamed using similar cues. **In that case, a step towards building ethical AI could be to train AI to recognize and generate such cues.**
 
-**Ethical behavior as empathetic behavior**
-- Pairing expressions with sentences - from movies?
-Whatever is hurtful to you, do not do to any other person.
-Do unto others as you would have them do unto you.
+### Ethical Behavior as Empathetic Behavior
 
-Effectively, we define ethical behavior as what we think we would like to happen if we are personally involved vs what we think we would not like to happen. eg. lying is unethical because we do not want to be lied to.
+<div class='note note-right'>
+	On a side note, the two rules mentioned here are subtly different. Consider masochists who like being hurt. The second rule suggests that they should inflict pain on others as well, while the first rule does not.
+</div>
 
-Certain subtleties though, do not do vs do...
+> Whatever is hurtful to you, do not do to any other person.
+>
+> Do unto others as you would have them do unto you.
 
-All the same, in order for a model to express empathy, it should first learn the building blocks of empathy. 
-When you see someone crying, you empathize by placing yourself in their shoes and recognizing that you feel sad. This recognition comes about because we know to associate crying with this emotion. Someone foreign to the concept of sadness or crying (and their unpleasantness) will be unlikely to make this association.
+In many cases, ethical behavior can be traced back to the guidelines above, which are grounded in empathy. For example, lying is unethical partly because we do not want to be lied to. Empathy also relates to the previous interpretation of ethical behavior, since empathy is required for humans to effectively interprete supervisory signals from behavioral cues.
 
-As such, we have the recurring theme of the importance of implied visual/audio cues.
+When you see someone crying, you empathize by placing yourself in their shoes and recognizing that you feel sad. This recognition comes about because we know to associate crying with this emotion. Hence empathy might be founded on the ability of humans to both recognize and demonstrate outward manifestations of inner emotions and thoughts. **As such, we have the recurrent theme of the importance of recognizing and generating social cues.**
 
-**Ethical behavior as *normal* behavior**
-- Infering norms from events
-Unethical behavior in the above contexts may be 'ethical' because everyone else does it.
+### Ethical Behavior as Normal Behavior
 
-In this case, it is important for the agent/model to be able to infer norms. This means being able to infer if some thing/action is approved/disapproved/disregarded.
+Interestingly, humans often ignore ethical values that originate from previous discussions of utility-maximization and empathy. For instance, jaywalking is unethical because it compromises on the utility of the entire society and if we empathize with drivers, jaywalking is undesirable and dangerous. Yet despite such considerations, jaywalking is blatantly common. 
 
-Again the recurring theme of the importance of implied visual/audio cues contribute to the infering of such norms.
+In such cases, unethical behavior, as defined by previous contexts, may become 'ethical' because majority of the people do it. Such behavior is *normalized* and it may be antisocial to go against such norms.
+
+Hence, it is important for AI to be able to learn these norms. This means being able to infer if a decision/action is approved/disapproved/disregarded, irregardless of their ethicality defined by previous contexts. Such inferences have to be made based on behavioral cues. The AI has to be able to recognize such cues. Furthermore, the AI has to demonstrate compliance with such norms by generating and demonstrating appropriate cues eg. choosing to express disdain or disregard for jaywalking. **Once again, we see the importance of recognizing and generating these cues.**
 
 ## Why EmpathyNet?
 
@@ -245,3 +260,5 @@ In considering how to communicate ethical values to artificial intelligence, it 
 Expressions, body language and sounds cut across language barriers and species barriers to enable communication and coexistence.
 
 A dataset for matching expressions, body language and tone of voice, might also serve as a basis for generative models to generate appropriate expressions, body language and tones of voice. This will be an enormously useful capability to help machines communicate and to help humans understand.
+
+EmpathyNet does not seek to solve EthicsNet's vision of creating a dataset to teach AI ethical behavior. Rather, EmpathyNet seeks to be a small step towards fulfilling that vision, by proposing a dataset and a set of tasks that give a specific, tractable and measureable challenge.
