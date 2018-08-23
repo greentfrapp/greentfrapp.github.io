@@ -98,10 +98,10 @@ In the example above, the video of a face is paired with a corresponding screenc
 
 Several tasks can then be conceived, grouped under classification and generation.
 
-1. **Classification.** Predict the correct A cue out of N options, conditioned on a B cue. \<EXAMPLE HERE>
-2. **Generation.** Minimize the negative log likelihood of an A cue, conditioned on a B cue. \<EXAMPLE HERE>
+1. **Classification.** Predict the correct *A* cue out of *N* options, conditioned on a *B* cue. \<EXAMPLE HERE>
+2. **Generation.** Minimize the negative log likelihood of an *A* cue, conditioned on a *B* cue. \<EXAMPLE HERE>
 
-For both tasks, there are several possible combinations of A-B.
+For both tasks, there are several possible combinations of *A*-*B*.
 
 \<TABLE HERE>
 
