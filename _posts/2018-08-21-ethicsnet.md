@@ -46,6 +46,8 @@ mathjax: True
 
 We first give an overview of our proposed solution, EmpathyNet. Thereafter we elaborate on how we arrive at our proposal, beginning with an analysis of ImageNet, as well as some alternatives that we have considered. Then we briefly discuss the nature of ethics and how it motivates the design of EmpathyNet. This is followed by unique advantages of the dataset. Finally, we consider how EmpathyNet may be collected and implemented.
 
+---
+
 ## 1 EmpathyNet
 
 In this green paper, we introduce **EmpathyNet** - a multimodal dataset that serves as the foundation for learning empathy. 
@@ -90,7 +92,34 @@ Cues can take the form of:
 
 We then assess demonstrations of empathy by a series of tasks involving recognition and generation of cues. Specifically, the dataset comprises cue groups, where a cue group contains a video/image (facial expression or body language) cue, with corresponding audio and text (verbal) cues.
 
-\<EXAMPLE HERE>
+**Example of a set of cues.**
+<table>
+  <thead>
+    <tr>
+      <th>Cue Type</th>
+      <th style="text-align: center">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Video</td>
+      <td><iframe width="504" height="284" src="https://www.youtube.com/embed/0uSOiu_WUDw?rel=0&amp;start=67&end=71" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
+    </tr>
+    <tr>
+      <td>Audio</td>
+      <td><i>Refer to Video</i></td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><img style='width: 504px;' src='/assets/imagecue.png'/></td>
+    </tr>
+    <tr>
+      <td>Text</td>
+      <td>*Laughter* I don't wanna kill you!</td>
+    </tr>
+  </tbody>
+</table>
+*The irony of using Joker in an ethics dataset!*
 
 In the example above, the video of a face is paired with a corresponding screencapture of the expression, audio clip and subtitle. As the example hints, existing movies, documentaries and video platforms might be a tremendous source of data.
 
@@ -98,12 +127,13 @@ In the example above, the video of a face is paired with a corresponding screenc
 
 Several tasks can then be conceived, grouped under classification and generation.
 
-1. **Classification.** Predict the correct *A* cue out of *N* options, conditioned on a *B* cue. \<EXAMPLE HERE>
-2. **Generation.** Minimize the negative log likelihood of an *A* cue, conditioned on a *B* cue. \<EXAMPLE HERE>
+- **Regular Classification.** Label the cue as belonging to one of several predefined classes. This would be similar to ImageNet, but in this case the classes could be forms of social expressions or emotions such as sadness, anger, happiness, madness (above). We can choose to classify a set of cues (video+audio+text), classify single video/audio/text cues individually or a mixture of both.
+- **Multiple-Choice-Question (MCQ) Classification.** Predict the correct *A* cue out of *N* options, conditioned on a *B* cue. Eg. given the image cue from the above example, predict the most likely corresponding text cue out of four possible choices.
+- **Generation.** Minimize the negative log likelihood (NLL) of an *A* cue, conditioned on a *B* cue. Eg. given an image cue, maximize the probability of generating the corresponding text cue. NLL is a metric used commonly in assessing generative models, such as in the work by van den Oord et al. ([2016](https://arxiv.org/abs/1606.05328)) (see Tables 1 and 2 in the paper).
 
-For both tasks, there are several possible combinations of *A*-*B*.
+For all three tasks, several tasks can be conceived by mixing the types of cues used, such as predicting the most likely audio cue based on an image+text cue or predicting the most likely image cue based on an audio cue etc.
 
-\<TABLE HERE>
+---
 
 ## 2 On Datasets
 
@@ -129,9 +159,9 @@ Humans are able to read a piece of short text and decide if the text is describi
 
 > Shelter provides dogs with big comfy chairs.
 
-*Taken from r/MadeMeSmile.*
+*Taken from [r/MadeMeSmile](https://www.reddit.com/r/MadeMeSmile/comments/99dhec/shelter_provides_dogs_with_big_comfy_chairs/).*
 
-We might test for such ethical reasoning with a dataset of text samples, where each sample has a binary label indicating if the text is describing ethical behavior or concepts. (The label could also be a discrete or continuous score.) A low-cost way to do this is to crawl sites such as the r/MadeMeSmile or r/UpliftingNews subreddits and extract post titles, marking them as ethical. Neutral samples can be obtained from regular subreddits eg. r/Showerthoughts or r/puns. Nonethical samples can be obtained from subreddits such as r/UnethicalLifeProTips.
+We might test for such ethical reasoning with a dataset of text samples, where each sample has a binary label indicating if the text is describing ethical behavior or concepts. (The label could also be a discrete or continuous score.) A low-cost way to do this is to crawl sites such as the [r/MadeMeSmile](https://www.reddit.com/r/MadeMeSmile/) or [r/UpliftingNews](https://www.reddit.com/r/UpliftingNews/) subreddits and extract post titles, marking them as ethical. Neutral samples can be obtained from regular subreddits eg. [r/Showerthoughts](https://www.reddit.com/r/Showerthoughts/) or [r/puns](https://www.reddit.com/r/puns/). Nonethical samples can be obtained from subreddits such as [r/UnethicalLifeProTips](https://www.reddit.com/r/UnethicalLifeProTips/) or [r/assholedesign](https://www.reddit.com/r/assholedesign/).
 
 **Drawbacks.** Even if a model performs well on such a task, we might consider it a text classifier rather than having learned any semblance of ethics. A successful model might be similar to a spam classifier, just in a different domain. Such a model is also probably inherently brittle, unable to accurately classify text with unseen vocabulary. Also, ethics feels inherently multimodal, not just correlated with certain word frequencies or sequences. One way to think about it - replace every word in the vocabulary of the dataset with a random word eg. replace *help* with *giraffe*. The model will still be able to perform equally well, which feels counterintuitive.
 
@@ -147,11 +177,9 @@ In natural language processing, there is a concept known as language modeling. F
 
 **Drawbacks.** One consideration is that the input provided to the model should be a form of API for the Sims-like environment (eg. a set of discrete actions) rather than pixel values of the image or video. It will be challenging, in terms of resources, for a model to have to generate entire images for predictions. Such an obstacle distracts from the true goal of EthicsNet. Since we are constrained to having some form of API for the action space, we cannot use cheaper alternatives such as clips from movies and videos.
 
-\<EXAMPLE HERE>
-
 Finally, context is a significant factor in making ethical decisions. We will have to consider how to embed contextual information into the samples. For example, if the scenario is Alfred hitting Bob, the context might be self-defence or robbery or playful banter, with the ethicality varying widely based on the context. How might we embed such contextual information without straightforwardedly disclosing the answer (ie. whether it is ethical behavior)? It will also be challenging to provide context for each sample in an efficient effective manner that is scaleable for the EthicsNet organizers.
 
-\<EXAMPLE HERE>
+---
 
 ## 3 On Ethics
 
@@ -196,6 +224,8 @@ In such cases, unethical actions, as defined by previous contexts, may become 'e
 
 It is important for AI to be able to learn these norms and this infering if a decision/action is approved/disapproved/disregarded. Again, such inferences have to be made based on recognizing behavioral cues. Furthermore, the AI has to demonstrate compliance with such norms by generating and manifesting appropriate cues eg. choosing to express disdain or disregard for jaywalking. **Once again, we see the importance of recognizing and generating these social cues.**
 
+---
+
 ## 4 Why EmpathyNet?
 
 The primary motivation behind EmpathyNet is the importance of recognizing and generating social cues, in the context of ethics (see Section 3). A model that does well on EmpathyNet will be able to match facial, behavioral, audio and textual cues. This capability serves as a foundation for pro-social and ethical behavior.
@@ -213,6 +243,8 @@ There are also several other advantages of EmpathyNet, which we list below.
 **Inclusive.** If we gather the data for EmpathyNet using movies, documentaries and videos from online platforms (see Section 5), then there is a good chance that the dataset is inclusive across races, nationalities and age groups.
 
 **Good Return of Investment (ROI).** Using the method described below, it is possible to generate a large amount of data with relatively low human cost. Furthermore, the data is not ethics-specific and can be used by researchers for other current and future tasks. If the above factors of multimodality and inclusiveness are observed, this dataset might also go a long way towards reducing algorithmic bias in image and audio models.
+
+---
 
 ## 5 Building EmpathyNet
 
@@ -234,16 +266,20 @@ For a regular classification task like the ImageNet challenge, each sample (eith
 
 For a multiple-choice-question (MCQ) task like DeepMind's Procedurally Generated Matrices ([Barrett et al., 2018](http://proceedings.mlr.press/v80/santoro18a/santoro18a.pdf)), we need to generate questions.
 
-Suppose the task consists of choosing the correct audio cue for a given image cue (above). A question consists a single image cue with four audio cues, one of which is correct. From the previous process, we already have a dataset of matched cues ie. correct answers. For every sample, we will have to add three other samples that serve as the incorrect answers. These incorrect options can be taken from other samples in the dataset, but there are a few pitfalls here.
+Suppose the task consists of choosing the correct audio cue for a given image cue (above). A question consists a single image cue with four audio cues, one of which is correct. From the previous process, we already have a dataset of matched cues ie. correct answers. For every sample, we will have to add three other samples that serve as the incorrect answers. These incorrect options can be randomly sampled from other samples in the dataset, but there are a few potential pitfalls here.
 
 - All the audio cues for a single question should have similar characteristics eg. gender and age. Otherwise, the model might be matching an image cue of a child to the audio cue of a child because it has learned about age correlation rather than expression correlation.
-- As mentioned above, removing textual information from the audio is important since we do not want a lip-reading or speech-to-text model.
-- We also have to be careful not to add another audio cue that is from a similar class. For instance, consider an image of an angry man with a corresponding audio cue of him shouting. We can generate incorrect audio cue options by randomly picking audio cues from other samples. But if the randomly selected audio cue is also from another angry man, it should technically be a correct answer as well. So we have to be careful and sample from different classes for incorrect answers. This would be easily facilitated if we already determined a fixed set of predefined classes.
+- We also have to be careful not to add another audio cue that is from a similar class. For instance, consider an image of an angry man with a corresponding audio cue of him shouting. We can generate incorrect audio cue options by randomly picking audio cues from other samples. But if the randomly selected audio cue is also from another angry man, it should technically be a correct answer as well. So we have to be careful and sample from different classes for incorrect answers. This could be easily facilitated if we already determined a fixed set of predefined classes.
+- Finally, as mentioned above, removing textual information from the audio is important since we do not want a lip-reading or speech-to-text model.
 
-\<Using a concrete example might be better>
+---
 
-## Conclusion
+## 6 Conclusion
 
 In considering how to communicate ethical values to artificial intelligence, it might be worth taking a step back and observing how we communicate and understand each other across language barriers and even species barriers. Expressions, body language and sounds cut across language barriers and species barriers to enable communication and coexistence. A dataset for matching expressions, body language and tone of voice, has tremendous potential for assessing empathy and other fascinating goals, such as helping machines communicate with humans.
 
 EmpathyNet does not seek to solve EthicsNet's vision of creating a dataset to teach AI ethical behavior. Rather, EmpathyNet seeks to be a small step towards fulfilling that vision, by proposing a dataset and a set of tasks that give a specific, tractable and measureable challenge.
+
+---
+
+Thanks for reading!
