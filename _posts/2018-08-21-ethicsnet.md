@@ -6,6 +6,7 @@ date:   2018-08-21 00:00:00
 tags: ai social
 comments: True
 draft: True
+mathjax: True
 ---
 
 <div class='note note-left'>
@@ -24,35 +25,46 @@ draft: True
 
 ## Contents
 
-1. Overview of EmpathyNet
+1. EmpathyNet
 2. Review of Current Datasets
 	1. Success Factors of ImageNet
 	2. Other Related Datasets and Relevant Notes
 	3. Possible Alternatives
-3. Context of Ethics
-4. How EmpathyNet Builds Up to Larger Goals
-5. Building EmpathyNet
+3. Ethics
+4. Why EmpathyNet?
+5. Implementing EmpathyNet
 
-We cut right to the chase by first giving a brief overview of the proposed solutions, before elaborating on how we arrive at the solutions. This begins with a detailed analysis of current datasets, with important lessons on success factors and potential pitfalls. Then we have a brief discussion on the context of ethics, which will provide specific motivations for the datasets. This then leads nicely to how the datasets contribute to these motivations and subsequently larger goals. Finally, we describe in detail how the solutions may be implemented in an efficient low-cost high-quality manner.
+We first give a brief overview of our proposed solution, EmpathyNet. Thereafter we elaborate on how we arrive at the proposal of EmpathyNet. This begins with an analysis of ImageNet and other datasets, with important lessons on success factors and potential pitfalls. We also describe some alternatives that we have considered, along with why we eventually rejected these alternatives. Then we have a brief discussion on the context of ethics, which will provide specific motivations for the datasets. This is followed by how EmpathyNet contributes to these motivations and subsequently larger goals. Finally, we describe in detail how EmpathyNet may be implemented in an efficient low-cost high-quality manner.
 
-## Overview of EmpathyNet
+## EmpathyNet
 
-In this green paper, we introduce EmpathyNet - a multimodal dataset that serves as the foundation for learning empathy. 
+In this green paper, we introduce EmpathyNet - a multimodal dataset that serves as the foundation for learning empathy (duh!). 
 
 In the context of ethics, empathy serves the dual purpose of motivation and teacher. Empathy motivates the construction of ethical values such as:
 
 > Do unto others as you would have them do unto you.
 
-Empathy also teaches - humans infer the likeability or normalcy of their actions from the responses of the people around them. For instance, children may infer that sharing is good from positive *vibes* given by their peers and parents. Such *vibes* include verbal language, body language, tone of voice and facial expression, with latter factors contributing more when verbal comprehension is inadequate. The ability to understand such *vibes* stem from a modicum of empathy, defined here as:
+Empathy also teaches. Humans infer the likeability or normalcy of their actions from the responses of the people around them. For instance, children may infer that sharing is good from positive *vibes* given by their peers and parents. Such vibes include verbal language, body language, tone of voice and facial expression, with latter factors contributing more when verbal comprehension is inadequate. The ability to understand such vibes stem from a modicum of empathy, which we define here as:
 
-> The ability to understand and share the feelings of another.
+> The ability to recognize, understand and share the feelings and thoughts of another.
 
-Other animals, such as dogs and cats, have also exhibited the ability of empathy. Examples include the importance of tone of voice in training animals and the concept of emotional support animals. There are two important points here.
+Other animals, such as dogs and cats, have exhibited the ability of empathy. Examples include the importance of tone of voice in training animals and the concept of emotional support animals. This illustrates two important points.
 
-1. The language barrier is near-unbreachable between humans and other animals. Yet both parties are able to convey extremely subtle messages, ranging from sorrow to anger to happiness. This might indicate that textual information is unnecessary for empathy, with a greater emphasis on body language, tone of voice and facial expression.
-2. As humans we do not know for sure if our animal companions truly *empathize* with us. Do they really know how our emotions feel like? Do they really *understand and share* our feelings? Without a device to transplant consciousness, we will probably never find out. But the important thing here is that, despite all that, many humans do feel that animals truly empathize. We firmly believe this based on our inference of superficial cues. This suggests that for artificial intelligence, demonstrating empathy might be far more crucial than truly possessing empathy.
+1. The language barrier is near-unbreachable between humans and other animals. Yet both parties are able to convey extremely subtle messages, ranging from sorrow to anger to happiness. **This might indicate that textual information is unnecessary for empathy, with a greater emphasis on body language, tone of voice and facial expression.**
+2. As humans we do not know for sure if our animal companions truly *empathize* with us. Do they really know how our emotions feel like? Do they really *understand and share* our feelings? Without a device to transplant consciousness, we will probably never find out. But the important thing here is that, despite all that, many humans do feel that animals truly empathize. We firmly believe this based on our inference of superficial cues. **This suggests that for artificial intelligence, demonstrating empathy might be far more crucial than truly possessing empathy.**
 
-Based on these, the goal of EmpathyNet is to facilitate the assessment of demonstrations of empathy. This is primarily achieved by a series of tasks that test models' abilities to both match and generate cues. These tasks are facilitated by a multimodal dataset consisting of video, image and audio samples. Specifically, the dataset comprises cues, where a single cue contains a video subcue, with corresponding image, audio and text subcues.
+Based on these observations, the goal of EmpathyNet is to facilitate the assessment of demonstrations of empathy using a multimodal dataset of cues, which we define here as:
+
+> A signal that conveys a feeling or thought.
+
+Cues can take the form of:
+
+- **Verbal messages.** The textual content of speech.
+- **Audio cues.** The tone, speed and manner of speech or non-speech sounds such as crying and laughter.
+- **Facial expressions.** Facial movements and distortions.
+- **Body language.** Body posture, tics, gestures and their associated characteristics such as size and speed.
+
+We then assess demonstrations of empathy by a series of tasks involving recognition and generation of cues. Specifically, the dataset comprises cue groups, where a cue group contains a video (facial expression or body language) cue, with corresponding image, audio and text (verbal) cues.
 
 \<EXAMPLE HERE>
 
@@ -66,7 +78,9 @@ Several tasks can then be conceived, grouped under classification and generation
 \<EXAMPLE HERE> We might have five possible tasks - Video-Audio, Video-Text, Audio-Text, Image-Audio, Image-Text.
 2. **Generation.** Here the model is required to minimize the negative log likelihood of $$\alpha$$ cue, conditioned on $$\beta$$ cue. \<EXAMPLE HERE>
 
-For both tasks, there are several possible combinations of $$\alpha$$-$$\beta$$ \<TABLE HERE>.
+For both tasks, there are several possible combinations of $$\alpha$$-$$\beta$$.
+
+\<TABLE HERE>
 
 ## Success Factors of ImageNet
 
@@ -74,9 +88,11 @@ Specific factors relevant to EthicsNet
 
 - **Size matters.** The size of ImageNet is obviously an important factor in the success of image classification. On a side note, the size of ImageNet has also made it a target for solving the problem of efficiently training on large datasets. 
 - **Annotation agreement.** Image-wise it is relatively simpler to have good annotation agreement, as compared to the subjective nature of ethics. It is also important to see that the consistency lies in the labels and not in the dataset - consistency in labels and variety in dataset lead to generalization, whereas consistency in dataset and variety in labels lead to confusion.
-- **Specific scope.** Despite its size, ImageNet is a concrete and specific dataset with an arguably narrow scope. Every sample is a single image labeled with one of a thousand labels (1000 in the annual challenge; the actual ImageNet has over 20 000). *One thousand classes* sounds like a huge number but is tiny compared to the number of objects a human sees everyday. In limiting the dataset to one thousand classes, the image classification task becomes far more tractable.
+- **Specific scope.** Despite its size, ImageNet is a rather specific dataset with an arguably narrow scope. Every sample is a single image labeled with one of a thousand labels (1000 in the annual challenge; the actual ImageNet has over 20 000). *One thousand* classes sounds like a huge number but is tiny compared to the number of objects a human sees everyday. Furthermore, the dataset consists of only images ie. 2D representations. This is another severe constraint compared to the real world where humans observe and recognize 3D objects. In limiting the dataset with such constraints, the image classification task becomes far more tractable and the ability acquired by trained models can be described in concrete terms eg. the model is able to achieve 94% accuracy for 2D-image classification across a test set of a thousand classes. Teaching machines to recognize objects might seem intractable given the infinite types of objects available. But we can move towards this seemingly intractable goal by taking concrete specific steps that move us towards the goal slowly but surely.
 - **Well-defined metrics.** ImageNet, being primarily a classification task, has a simple metric of accuracy. The accuracy has been subdivided into more elaborate metrics such as top-five-accuracy but these remain easily measured and understood. The concreteness of the metric for a task is of paramount importance since it defines the task and provides a goal for researchers to work towards.
 - **Reuseable for other tasks.** While it originated as a classification dataset, ImageNet has also served as the foundation for a wider variety of tasks, such as object (bounding box) detection and image generation (minimize negative log likelihood). The reason for this is debatable but can be attributed largely to reasons above, specifically the size of the dataset and the quality of the annotations.
+
+Aside from the dataset, the success and popularity of ImageNet can also be attributed to enthusiastic reception and participation of the annual ImageNet Large Scale Visual Recognition Challenge (ILSVRC). [This](https://qz.com/1034972/the-data-that-changed-the-direction-of-ai-research-and-possibly-the-world/) insightful Quartz article touches on several important factors that have led to this success, such as the collaboration with PASCAL VOC and the AlexNet entry in 2012.
 
 ## Other Relevant Datasets
 
@@ -118,19 +134,6 @@ In evolving the concept of EmpathyNet, we have considered a few other possibilit
 - It’s not nice to stare at people.
 - If you see trash lying around and you aren’t doing anything particularly time sensitive, pick it up and put it in a wastebin.
 - If you see someone accidentally drop something (e.g. their wallet), alert them, and return it.
-
-But these *pro-social* behaviors are not simple!
-
-Important things to consider
-
-- Changing dynamics and definition
-- Alignment
-- Consistency
-- Long and short-term considerations
-- Scope
-- Metric
-
-## Subdefinitions of Ethics and Corresponding Tasks
 
 **Ethical behavior as utility-maximizing behavior**
 - Maximizing utility/equality of multiagent environments
@@ -218,46 +221,10 @@ For an MCQ task like DeepMind's Procedurally Generated Matrices, we will have to
 
 \<Using a concrete example might be better>
 
-## Ideas
-
-- Fairytales
-- Multiagent environments with preset dynamics
-- Maximizing utility for all players - utility or equality?
-- Learning from human interaction - consider Tay
-- Simultaneous multiagent simulation to learn empathy
-- Use a set of ground rules (atoms) to propagate a set of more complex moral guidelines in a simulated scenario / environment
-- Scenarios with well-defined behaviors eg. characters with clear likes/dislikes etc.
-- Modeling human behavior eg. given an environment and a set of actions, model the underlying policy
-- Something similar to inductive logic programming - given positive and negative scenarios, predict other scenarios
-
-The ideal EthicsNet dataset is such that a model that performs well on this dataset might be said to be good at making ethical decisions.
-
-Explainability is important. There is an ethical difference between picking up rubbish because I want to make the place cleaner for everyone else and picking up rubbish because I get annoyed by rubbish. See also DeepMind's IQ test performing better when trained with explanations.
-
-Possible problems with a fixed dataset
-
-of crowdsourced labeled statements (eg. from a forum)
-
-- Positive labels on most social media platforms are more correlated to humor, surprise rather than morals or echo-chambers
-- Huge bias depending on the platform (eg. Reddit's r/The_Donald and r/hillaryclinton)
-- Singular statements may not have sufficient context for ethical analysis eg. 'I find this disgusting.'
-- It is possible for model to successfully identify sentences as positive or negative without an ethics-related understanding eg. based on word frequency
-- Should be renamed as text classification or sentiment analysis
-
-- Use titles from Reddit's UpliftingNews and MadeMeSmile vs ULPT
-
-- Can be adversarial eg. train classifier and then generator to generate based on given words
-
-of scenarios paired with possible choices (pick the most ethical choice)
-of scenarios labeled as ethical or unethical
-
-- Text, image, video or ...?
-	For text, same problem as second last point above
-	For image and video, might be difficult to illustrate ethical scenarios
-- Costly with low ROI
+## Conclusion
 
 In considering how to communicate ethical values to artificial intelligence, it might be worth taking a step back and observing how we communicate and understand each other across language barriers and even species barriers.
 
-Expressions, body language and tone of voice cut across language and species barriers to enable communication and coexistence.
+Expressions, body language and sounds cut across language barriers and species barriers to enable communication and coexistence.
 
-A dataset for matching expressions, body language and tone of voice, might also serve as a basis for generative models to generate new expressions, body language and tones of voice. This will be an enormously useful capability to help machines communicate and to help humans understand.
+A dataset for matching expressions, body language and tone of voice, might also serve as a basis for generative models to generate appropriate expressions, body language and tones of voice. This will be an enormously useful capability to help machines communicate and to help humans understand.
