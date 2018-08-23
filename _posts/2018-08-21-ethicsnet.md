@@ -26,13 +26,22 @@ mathjax: True
 ## Contents
 
 1. EmpathyNet
-2. Review of Current Datasets
+2. On Datasets
 	1. Success Factors of ImageNet
-	2. Other Related Datasets and Relevant Notes
+	2. Other Relevant Datasets
 	3. Possible Alternatives
-3. Ethics
+3. On Ethics
+	1. Ethical Behavior is Utility-maximizing Behavior
+	2. Ethical Behavior is Empathetic Behavior
+	3. Ethical Behavior is Normal Behavior
 4. Why EmpathyNet?
-5. Implementing EmpathyNet
+	1. Multimodal
+	2. Inclusive
+	3. Cost effective
+5. Making EmpathyNet
+	1. Collecting the data
+	2. Designing the challenge
+6. Conclusion
 
 We first give a brief overview of our proposed solution, EmpathyNet. Thereafter we elaborate on how we arrive at the proposal of EmpathyNet. This begins with an analysis of ImageNet and other datasets, with important lessons on success factors and potential pitfalls. We also describe some alternatives that we have considered, along with why we eventually rejected these alternatives. Then we have a brief discussion on the context of ethics, which will provide specific motivations for the datasets. This is followed by how EmpathyNet contributes to these motivations and subsequently larger goals. Finally, we describe in detail how EmpathyNet may be implemented in an efficient low-cost high-quality manner.
 
@@ -183,7 +192,7 @@ In this case, it is important for the agent/model to be able to infer norms. Thi
 
 Again the recurring theme of the importance of implied visual/audio cues contribute to the infering of such norms.
 
-## Advantages of EmpathyNet
+## Why EmpathyNet?
 
 **Multimodal.** Compared to purely textual or purely image-based datasets, EmpathyNet is multimodal, which seems suitable in the context of ethics. 
 
