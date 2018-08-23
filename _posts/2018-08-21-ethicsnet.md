@@ -39,12 +39,9 @@ mathjax: True
 	2. Ethical Behavior as Empathetic Behavior
 	3. Ethical Behavior as Normal Behavior
 4. Why EmpathyNet?
-	1. Multimodal
-	2. Inclusive
-	3. Cost effective
 5. Making EmpathyNet
-	1. Collecting the data
-	2. Designing the challenge
+	1. Collecting the Data
+	2. Designing the Tasks
 6. Conclusion
 
 We first give an overview of our proposed solution, EmpathyNet. Thereafter we elaborate on how we arrive at our proposal, beginning with an analysis of ImageNet, as well as some alternatives that we have considered. Then we briefly discuss the nature of ethics and how it motivates the design of EmpathyNet. This is followed by unique advantages of the dataset. Finally, we consider how EmpathyNet may be collected and implemented.
@@ -221,11 +218,15 @@ There are also several other advantages of EmpathyNet, which we list below.
 
 As hinted in earlier sections, a low-cost method of gathering data for EmpathyNet is through movies, documentaries and online video platforms. There may be potential collaboration with Google/YouTube or movie studios to use their collections. Here we describe a potential efficent manner to collect EmpathyNet data.
 
+### Collecting the Data
+
 Consider if we have a single movie, containing video, audio and textual (subtitles) information. We also begin by focusing on facial expressions rather than the entire set of body language cues.
 
 We first use a face recognition model to identify segments of the movie with large enough faces (eg. more than 20% of the screen dimensions). We then cut out these video and audio segments, ensuring that the sentences in the subtitles are kept whole and uninterrupted. Each segment should only contain a single speaker. We now have samples of matched video, audio and textual cues. We can also use screen captures of the video segments (eg. 5 screen captures taken at equal intervals in each video segment). This will provide a static image alternative for facial cues, which will be easier for researchers to process.
 
 Another post-processing step we can perform is to remove textual information from the audio. One way is to perform blurring on the audio, such that the tone and speed are retained while the words are unintelligible. This is to prevent models from trivially matching lip movements to audio or matching text to audio., since we do not want to test for lip-reading or speech-to-text capabilities.
+
+### Designing the Tasks
 
 The above steps might suffice for a dataset meant to train generative models. However, for classification tasks, we still need labels.
 
