@@ -49,15 +49,23 @@ We first give a brief overview of our proposed solution, EmpathyNet. Thereafter 
 
 In this green paper, we introduce EmpathyNet - a multimodal dataset that serves as the foundation for learning empathy (duh!). 
 
+We are conscious that the original problem statement from the EthicsNet Guardians' Challenge called for
+
+>  [...] ideas on how to create the best possible set of examples of prosocial behaviour for AI to learn from (i.e. a machine learning dataset).
+
+However, after much deliberation, we offer a counterproposal to instead design a dataset that assesses demonstrations of empathy. Here we describe some of our motivation behind this counterproposal. For more details please refer to Sections 3 and 4.
+
 In the context of ethics, empathy serves the dual purpose of motivation and teacher. Empathy motivates the construction of ethical values such as:
 
 > Do unto others as you would have them do unto you.
 
-Empathy also teaches. Humans infer the likeability or normalcy of their actions from the responses of the people around them. For instance, children may infer that sharing is good from positive *vibes* given by their peers and parents. Such vibes include verbal language, body language, tone of voice and facial expression, with latter factors contributing more when verbal comprehension is inadequate. The ability to understand such vibes stem from a modicum of empathy, which we define here as:
+Values such as these partly originate from empathy and identification with other humans and organisms.
+
+Empathy also teaches. Humans infer the likeability or normalcy of their actions from the responses of the people around them. For instance, children may infer that sharing is good from positive *vibes* given by their peers and parents. Such vibes include verbal language, tone of voice, body language and facial expression - with latter factors contributing more when verbal comprehension is inadequate. The ability to understand such vibes stem from empathy, which we define here as:
 
 > The ability to recognize, understand and share the feelings and thoughts of another.
 
-Other animals, such as dogs and cats, have exhibited the ability of empathy. Examples include the importance of tone of voice in training animals and the concept of emotional support animals. This illustrates two important points.
+Other animals, such as dogs and cats, have also exhibited empathy. Examples include the importance of tone of voice in training animals and the concept of emotional support animals. This illustrates two important points.
 
 1. The language barrier is near-unbreachable between humans and other animals. Yet both parties are able to convey extremely subtle messages, ranging from sorrow to anger to happiness. **This might indicate that textual information is unnecessary for empathy, with a greater emphasis on body language, tone of voice and facial expression.**
 2. As humans we do not know for sure if our animal companions truly *empathize* with us. Do they really know how our emotions feel like? Do they really *understand and share* our feelings? Without a device to transplant consciousness, we will probably never find out. But the important thing here is that, despite all that, many humans do feel that animals truly empathize. We firmly believe this based on our inference of superficial cues. **This suggests that for artificial intelligence, demonstrating empathy might be far more crucial than truly possessing empathy.**
