@@ -56,7 +56,7 @@ Based on these, the goal of EmpathyNet is to facilitate the assessment of demons
 
 \<EXAMPLE HERE>
 
-In the example above, the video of a face is paired with a corresponding screencapture of the expression, audio clip and subtitle. As the example hints, existing movies and video platforms are a tremendous source of samples.
+In the example above, the video of a face is paired with a corresponding screencapture of the expression, audio clip and subtitle. As the example hints, existing movies, documentaries and video platforms are a tremendous source of samples.
 
 **Important Note:** We might want to remove textual information from audio cues. This can be done by applying a form of blurring to the audio cues, so only nontextual information such as pitch and speed is retained.
 
@@ -180,7 +180,43 @@ In this case, it is important for the agent/model to be able to infer norms. Thi
 
 Again the recurring theme of the importance of implied visual/audio cues contribute to the infering of such norms.
 
+## Advantages of EmpathyNet
+
+**Multimodal.** Compared to purely textual or purely image-based datasets, EmpathyNet is multimodal, which seems suitable in the context of ethics. 
+
+**Inclusive.** If we gather the data for EmpathyNet using movies, documentaries and videos from online platforms (see below), then there is a good chance that the dataset is inclusive across races, nationalities and age groups.
+
+**Good Return of Investment (ROI).** Using the method described below, it is possible to generate a large amount of data with relatively low human cost. Furthermore, the data is not ethics-specific and can be used by researchers for other current and future tasks. If the above factors of multimodality and inclusiveness are observed, this dataset might also go a long way towards reducing algorithmic bias in image and audio models.
+
 ## How EmpathyNet Builds Up to Larger Goals
+
+A model that does well on EmpathyNet will be able to match facial, behavioral, audio and textual cues. This capability serves as a foundation for pro-social and ethical behavior.
+
+For instance, recall that one of the challenges in building ethical agents is designing a suitable reward function that promotes human-aligned ethical behavior. A model that is equipped with the ability to recognize human cues will be better equipped to infer the underlying reward function of observed humans. For example, a robot that bumps into a human while walking might observe her expression of annoyance and realize that bumping into people is impolite. Recognizing this expression of annoyance and matching it to other cues experienced before will be an important first step.
+
+As its name suggests, EmpathyNet is also meant to assess the ability of machines to empathize or demonstrate empathy. But before we are able to design machines that can understand our feelings, we need to design machines that can recognize physical manifestations of such feelings ie. our cues. 
+
+Furthermore, a huge part of communicating empathy is the abilitiy to demonstrate these cues. EmpathyNet, as a dataset of cues, potentially enables models to generate corresponding cues that will allow them to demonstrate empathy.
+
+Of course, we can ask, "Do machines that recognize and demonstrate empathy truly *understand* empathy?" This is a largely intractable question but we want to point out that it is also largerly irrelevant. As mentioned in our introduction, we do not know for sure if animals understand our feelings but we believe they do based on how they seem to recognize our feelings and demonstrate behavior that convey their own feelings.
+
+## Building EmpathyNet
+
+A low-cost method of gathering data for EmpathyNet is through movies, documentaries and online video platforms. There may be potential collaboration with Google/YouTube or movie studios to use their collections.
+
+Here we describe a potential efficent manner to collect EmpathyNet data. Consider if we have a single movie, containing video, audio and textual (subtitles) information. We also begin by focusing on facial expressions rather than the entire set of body language cues.
+
+We first use a face recognition model to identify segments of the movie with large enough faces (eg. more than 20% of the screen dimensions). We then cut out these video and audio segments, ensuring that the sentences in the subtitles are kept whole and uninterrupted. Each segment should only contain a single speaker. We now have samples of matched facial, audio and textual cues. We can also use screen captures of the video segments (eg. 5 screen captures taken at equal intervals in each video segment). This will provide a static image alternative for facial cues. The static image alternatives will be far easier to process for researchers.
+
+Another post-processing step we can perform is to remove textual information from the audio. One way to do this is to perform blurring on the audio, such that the tone and speed are retained while the words are unintelligible. This will be important to prevent models from trivially matching lip movements to audio or matching text to audio. We probably do not want to test for lip-reading or speech-to-text capabilities.
+
+The above steps might suffice for a dataset meant to train generative models. However, for classification tasks, we have to generate labels. There are two possible ways to go about classification tasks.
+
+For a regular classification task like the ImageNet challenge, there will be a set of classes and each sample (can refer to a group of corresponding cues or a single cue) will belong to one of the classes. In this case, we will have to examine the actual dataset that we have collected in order to determine suitable labels.
+
+For an MCQ task like DeepMind's Procedurally Generated Matrices, we will have to generate questions. Suppose the task consists of choosing the correct audio cue for a given image cue. A question might have a single image cue with four audio cues, one of which is the correct one. From the above process, we already have a dataset of matched cues ie. the correct answers. For every sample, we will have to add three other samples that serve as the incorrect answers. These other *wrong* options can just come from the other samples in the dataset. But there are a few pitfalls here. All the audio cues for a single question should have similar characteristics eg. gender and age. Otherwise, the model might be matching an image cue of a child to the audio cue of a child because it has learned about age correlation rather than expression correlation. As mentioned above, removing textual information from the audio is important since we do not want a lip-reading or speech-to-text model. We also have to be careful not to add another audio cue that is from a similar expression. For instance, given an image of an angry man. The corresponding audio cue is him shouting. We can set the wrong options by randomly picking audio cues from other samples. But if the randomly selected audio cue is also from another angry man, it should technically be a correct answer. This then builds on the above paragraph where we determine a fixed set of classes for the entire dataset. Then we should not sample from the same class to generate the wrong option.
+
+\<Using a concrete example might be better>
 
 ## Ideas
 
