@@ -73,18 +73,42 @@ For both tasks, there are several possible combinations of $$\alpha$$-$$\beta$$ 
 Specific factors relevant to EthicsNet
 
 - **Size matters.** The size of ImageNet is obviously an important factor in the success of image classification. On a side note, the size of ImageNet has also made it a target for solving the problem of efficiently training on large datasets. 
-- **Annotation agreement.** - Image-wise it is relatively simpler to have good annotation agreement, as compared to the subjective nature of ethics. It is also important to see that the consistency lies in the labels and not in the dataset - consistency in labels and variety in dataset lead to generalization, whereas consistency in dataset and variety in labels lead to confusion.
-- **Specific scope** - Despite its size, ImageNet is a concrete and specific dataset with an arguably narrow scope. Every sample is a single image labeled with one of a thousand labels (1000 in the annual challenge; the actual ImageNet has over 20 000). *One thousand classes* sounds like a huge number but is tiny compared to the number of objects a human sees everyday. In limiting the dataset to one thousand classes, the image classification task becomes far more tractable.
-- **Well-defined metrics** - ImageNet, being primarily a classification task, has a simple metric of accuracy. The accuracy has been subdivided into more elaborate metrics such as top-five-accuracy but these remain easily measured and understood. The concreteness of the metric for a task is of paramount importance since it defines the task and provides a goal for researchers to work towards.
-- **Reuseable for other tasks** - While it originated as a classification dataset, ImageNet has also served as the foundation for a wider variety of tasks, such as object (bounding box) detection and image generation (minimize negative log likelihood). The reason for this is debatable but can be attributed largely to reasons above, specifically the size of the dataset and the quality of the annotations.
+- **Annotation agreement.** Image-wise it is relatively simpler to have good annotation agreement, as compared to the subjective nature of ethics. It is also important to see that the consistency lies in the labels and not in the dataset - consistency in labels and variety in dataset lead to generalization, whereas consistency in dataset and variety in labels lead to confusion.
+- **Specific scope.** Despite its size, ImageNet is a concrete and specific dataset with an arguably narrow scope. Every sample is a single image labeled with one of a thousand labels (1000 in the annual challenge; the actual ImageNet has over 20 000). *One thousand classes* sounds like a huge number but is tiny compared to the number of objects a human sees everyday. In limiting the dataset to one thousand classes, the image classification task becomes far more tractable.
+- **Well-defined metrics.** ImageNet, being primarily a classification task, has a simple metric of accuracy. The accuracy has been subdivided into more elaborate metrics such as top-five-accuracy but these remain easily measured and understood. The concreteness of the metric for a task is of paramount importance since it defines the task and provides a goal for researchers to work towards.
+- **Reuseable for other tasks.** While it originated as a classification dataset, ImageNet has also served as the foundation for a wider variety of tasks, such as object (bounding box) detection and image generation (minimize negative log likelihood). The reason for this is debatable but can be attributed largely to reasons above, specifically the size of the dataset and the quality of the annotations.
 
 ## Other Relevant Datasets
 
-- VQA
-- CLEVR
-- SQuAD
-- Berkeley Self-driving Dataset
-- DeepMind IQ Test
+There are many great datasets that have contributed to machine learning research eg. VQA ([Agrawal et al., 2015](https://arxiv.org/abs/1505.00468)), CLEVR ([Johnson et al., 2016](https://arxiv.org/abs/1612.06890)), SQuAD ([Rajpurkar et al., 2016](https://arxiv.org/abs/1606.05250)), YouTube-8M ([Abu-El-Haija, 2016](https://arxiv.org/abs/1609.08675)). Below we highlight some interesting datasets with important takeaways.
+
+**Procedurally Generated Matrices (PGM).**
+
+\<IMAGE>
+
+*At its heart, PGM is a multiple-choice-question (MCQ) test. Given the context panels (top eight), select the correct answer panel (bottom eight).*
+
+This is a dataset introduced by a DeepMind research team, which is meant to measure abstract reasoning ([Barrett et al., 2018](http://proceedings.mlr.press/v80/santoro18a/santoro18a.pdf)). One interesting thing about this dataset is that it measures several different *expressions* of abstract reasoning. For instance, in a typical dataset, there is a single defined training-test split. In PGM, a training-test split is called a *regime* and there are eight different regimes ie. eight ways to split the dataset into training and test sets. Different regimes may be of different difficulty or focus on different expressions of abstract reasoning.
+
+For example, the most basic regime is the `Neutral` regime, where the training and test splits are randomly sampled and mutually exclusive, with no other constraints. This is a normal training-test split in regular datasets. Contrast this with the `Held-out Shape-Colour` regime, where the training set does not contain any example with a certain shape (eg. square) and colour (black), while the test set will contain examples with this predefined shape and colour. This regime specifically tests if the model is able to extrapolate learned patterns to unseen shapes and colours.
+
+More importantly, experimental results by DeepMind shows that such specific constraints are extremely important. For the `Neutral` regime, their model had a generalization error ($$\text{ValidationAccuracy} - \text{TestAccuracy}$$) of $$-0.6%$$. For the `Held-out Shape-Colour` regime, the generalization error dropped to $$-46.6%$$. The systematic documentation of such trends is only possible due to the variety of constraints available in the dataset.
+
+## Possible Alternatives to EmpathyNet
+
+In evolving the concept of EmpathyNet, we have considered a few other possibilities. Ultimately we have chosen to propose EmpathyNet, but we list some possibilities here to serve as inspiration and provide more food for thought.
+
+**EthicalText.** Humans are able to read a piece of short text (eg. sentence or paragraph) and decide if the text is describing ethical behavior. We can test for such ethical reasoning with a dataset of text samples, where each sample has a binary label indicating if the text is describing ethical behavior or concepts. (The label could also be a discrete or continuous score.) An effective way to do this is to go to sites such as the r/MadeMeSmile or r/UpliftingNews subreddits and extract the titles, marking them as ethical. Neutral samples can be obtained from regular subreddits eg. r/Showerthoughts or r/puns. Nonethical samples can be obtained from subreddits such as r/UnethicalLifeProTips.
+
+`Drawbacks` If a model performs well on such a task, we might consider it a text classifier rather than having learned any semblance of ethics. A successful model might be similar to a spam classifier, just in a different domain. Such a model is also probably inherently brittle, unable to accurately classify text with unseen vocabulary. In contrast, ethics feels more multimodal in nature, not just correlated with certain word frequencies. One way to think about it - if we replace every word in the vocabulary of the dataset with a random word eg. replace *help* with *giraffe*. The model will still be able to perform equally well.
+
+**SimsNet V1.** A nice readily available simulation environment with human characters is the Sims franchise. Using a Sims game or something similar, we can set up certain scenarios and allow the machine to control a single character. This can be in the form of reinforcement learning ie. the machine controls the character and then tries to maximize a certain utility score. This can also be in the form of a regular dataset eg. with machine predicting the best immediate action to take in a single scenario, out of four options. Such a dataset appeals to a more *universal* concept of ethics, beyond textual information. 
+
+`Drawbacks` Such a dataset is actually essentially the same as any game dataset eg. Arcade Learning Environment (Atari) or OpenAI's gym and gym-retro. In all cases there is an environment and a score. Designing a model that is able to decide the best action for maximizing a score is the traditional reinforcement learning problem. Instead, the more important problem in the context of ethics is, "How can we design a reward function that maximizes ethical behavior?" Another way of phrasing it might be, "How can we infer such a score from observing the behavior of people?"
+
+**SimsNet V2.** In natural language processing, there is a concept known as language modeling. For instance, given the entire Shakespeare corpus, we can train a model to predict the next word, conditioned on the previous five words. Interestingly, researchers have extended this concept to show that trained models demonstrate some semblance of understanding and even commonsense reasoning. Likewise in computer vision, a type of generative algorithm, known as autoregressive generation, trains a model to generate the next pixel, conditioned on previous pixels. Images generated pixel-by-pixel in such a manner actually generate fully coherent images. In a similar manner, there might be a dataset containing Sims scenarios showing ethical behavior. An autoregressive model trained on such a dataset might be able to predict the next action given previous context, thereby learning a model of ethical behavior.
+
+`Drawbacks` One consideration is that the input provided to the model should be a form of API for the Sims-like environment (eg. a set of discrete actions) rather than pixel values. It will be challenging for a model to have to generate entire images for predictions - resource-wise. Such a challenge distracts from the true goal of EthicsNet. This then means that it is difficult to obtain a massive amount of data. Since we are constrained to having some form of API for the action space, we cannot use cheaper alternatives such as clips from movies and videos. Finally, context is a significant factor in making ethical decisions. We will have to consider how to embed contextual information into the samples. For example, if the scenario is Alfred hitting Bob, where the context might be self-defence or robbery or playful banter. How can we embed such contextual information without straightforwardedly disclosing the answer (of whether it is ethical behavior)? It will also be challenging to provide context for each sample in an efficient effective manner that is scaleable for the EthicsNet organizers.
 
 ## Ethics
 
@@ -155,6 +179,8 @@ Unethical behavior in the above contexts may be 'ethical' because everyone else 
 In this case, it is important for the agent/model to be able to infer norms. This means being able to infer if some thing/action is approved/disapproved/disregarded.
 
 Again the recurring theme of the importance of implied visual/audio cues contribute to the infering of such norms.
+
+## How EmpathyNet Builds Up to Larger Goals
 
 ## Ideas
 
