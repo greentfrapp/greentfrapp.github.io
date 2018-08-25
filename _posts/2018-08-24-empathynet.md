@@ -21,15 +21,21 @@ comments: True
 
 *Problem Excerpt from [EthicsNet Guardians’ Challenge](https://www.herox.com/EthicsNet).*
 
-> Sir said, ‘These are amazing productions, Andrew.’
->
-> Andrew said, ‘I enjoy doing them, Sir.’
->
-> ‘Enjoy?’
->
-> ‘It makes the circuits of my brain somehow flow more easily. I have heard you use the word “enjoy” and the way you use it fits the way I feel. I enjoy doing them, Sir.’
+---
 
-*Andrew demonstrating **empathy** in* The Bicentennial Man *(Asimov, 1976).*
+> Jimmy looked at Robutt, who was squeaking again, a very low, slow squeak, that seemed frightened. Jimmy held out his arms and Robutt was in them in one bound. Jimmy said, ‘What will the difference be between Robutt and the dog?’
+>
+> ‘It’s hard to explain,’ said Mr Anderson, ‘but it will be easy to see. The dog will really love you. Robutt is just adjusted to act as though it loves you.’
+>
+> ‘But, Dad, we don’t know what’s inside the dog, or what his feelings are. Maybe it’s just acting, too.’
+>
+> Mr Anderson frowned. ‘Jimmy, you’ll know the difference when you experience the love of a living thing.’
+>
+> Jimmy held Robutt tightly. He was frowning, too, and the desperate look on his face meant that he wouldn’t change his mind. He said, ‘But what’s the difference how they act? How about how I feel? I love Robutt and that’s what counts.’
+>
+> And the little robot-mutt, which had never been held so tightly in all its existence, squeaked high and rapid squeaks - happy squeaks.
+
+A Boy’s Best Friend *(Asimov, 1975).*
 
 ---
 
@@ -53,6 +59,16 @@ comments: True
 ---
 
 ## 1 EmpathyNet
+
+> Sir said, ‘These are amazing productions, Andrew.’
+>
+> Andrew said, ‘I enjoy doing them, Sir.’
+>
+> ‘Enjoy?’
+>
+> ‘It makes the circuits of my brain somehow flow more easily. I have heard you use the word “enjoy” and the way you use it fits the way I feel. I enjoy doing them, Sir.’
+
+*Andrew demonstrating **empathy** in* The Bicentennial Man *(Asimov, 1976).*
 
 In this green paper, we introduce **EmpathyNet** - a multimodal dataset that serves as the foundation for learning empathy. 
 
@@ -307,6 +323,8 @@ EmpathyNet does not seek to solve EthicsNet's vision of creating a dataset to te
 ---
 
 ## 7 References
+
+Asimov, Isaac. *A Boy’s Best Friend*. Boys’ Life, 1975. Print.
 
 Asimov, Isaac. *The Bicentennial Man*. Random House, Inc., 1976. Print.
 
