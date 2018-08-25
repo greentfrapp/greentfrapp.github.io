@@ -44,7 +44,7 @@ comments: True
 	2. [Ethical Behavior as Empathetic Behavior](#ethical-behavior-as-empathetic-behavior)
 	3. [Ethical Behavior as Normal Behavior]((#ethical-behavior-as-normal-behavior))
 4. [Why EmpathyNet?](#4-why-empathynet)
-5. [Making EmpathyNet](#5-making-empathynet)
+5. [Building EmpathyNet](#5-building-empathynet)
 	1. [Collecting the Data](#collecting-the-data)
 	2. [Designing the Tasks](#designing-the-tasks)
 6. [Conclusion](#6-conclusion)
@@ -134,7 +134,7 @@ We then assess demonstrations of empathy by a series of tasks involving recognit
 
 In the example above, the video of a face is paired with a corresponding screen capture of the expression, audio clip and subtitle. As the example hints, existing movies, documentaries and video platforms might be a tremendous source of data.
 
-**Important Note:** For several reasons (see Section [5](#5-making-empathynet)), we might want to remove textual information from audio cues. This can be done by applying a form of blurring to the audio cues, so only nontextual information, such as pitch and speed, is retained, while the exact words are unintelligible.
+**Important Note:** For several reasons (see Section [5](#5-building-empathynet)), we might want to remove textual information from audio cues. This can be done by applying a form of blurring to the audio cues, so only nontextual information, such as pitch and speed, is retained, while the exact words are unintelligible.
 
 Several tasks can then be conceived, grouped under classification and generation.
 
@@ -144,14 +144,22 @@ Several tasks can then be conceived, grouped under classification and generation
 
 For all three tasks, several tasks can be conceived by mixing the types of cues used, such as predicting the most likely audio cue based on an image+text cue or predicting the most likely image cue based on an audio cue etc.
 
+In the following sections, we first analyze **how to build a successful dataset** ([Section 2](#2-on-datasets)), before a **brief discussion of ethics** ([Section 3](#3-on-ethics)). These discussions serve as a foundation for introducing the **motivations behind EmpathyNet** ([Section 4](#4-why-empathynet)). Finally, we elaborate on **implementation details** in [Section 5](#5-building-empathynet).
+
 ---
 
 ## 2 On Datasets
 
+> EthicsNet is modeled after ImageNet, a dataset for machine vision which has been instrumental not only in providing actionable data for new machine vision algorithms to use, but also in providing a rallying-point and benchmarking tool for rapid development within this space.
+
+*Excerpt from [EthicsNet Guardians' Challenge](https://www.herox.com/EthicsNet).*
+
+In this section, we first analyze the success of ImageNet ([Deng et al., 2009](http://www.image-net.org/papers/imagenet_cvpr09.pdf)), the popular image dataset consisting over 14 million annotated URLs of images. This is meant to derive a set of possible guidelines for building a successful dataset. Next we discuss some alternative dataset concepts that we have considered and rejected, before conceiving EmpathyNet.
+
 ### Success Factors of ImageNet
 
-- **Size matters.** The size of ImageNet ([Deng et al., 2009](http://www.image-net.org/papers/imagenet_cvpr09.pdf)) is obviously an important factor in the success of image classification. On a side note, the size of ImageNet has also made it a target for solving the problem of efficiently training on large datasets. 
-- **Annotation agreement.** Image-wise it is relatively simpler to have good annotation agreement, as compared to the subjective nature of ethics. It is also important to see that the consistency lies in the labels and not in the dataset - consistency in labels and variety in dataset lead to generalization, whereas consistency in dataset and variety in labels lead to confusion.
+- **Size matters.** The size of ImageNet is obviously an important factor in the success of image classification. On a side note, the size of ImageNet has also made it a target for solving the problem of efficiently training on large datasets. 
+- **Annotation agreement.** This refers how much two (or more) separate human annotators agree on the same labels for a set of given samples. Without good annotation agreement, a large dataset annotated by many humans is likely to be extremely noisy with differing opinions on the meaning of labels. The resulting models trained on such noisy datasets will also suffer in performance. This also leads to unconvincing metrics (see below), since accuracy is meaningless on a dataset with poor annotation agreement. In the case of EthicsNet, the subjective nature of ethics makes annotation agreement a significant challenge.
 - **Specific scope.** Despite its size, ImageNet is a rather specific dataset with an arguably narrow scope. Every sample is labeled with one of a thousand labels (1000 in the annual challenge; the actual ImageNet has over 20 000). *One thousand* classes sounds like a huge number but is tiny compared to the number of objects a human sees everyday. Furthermore, the dataset consists of only images ie. 2D representations. In limiting the dataset with such clear constraints, the image classification task becomes far more tractable and success of models can be measured concretely.
 - **Well-defined metrics.** ImageNet, being primarily a classification task, has a simple metric of accuracy. The actual metrics may be more elaborate, such as top-five-accuracy, but these remain easily measured and understood. The clarity of the metric is paramount since it defines the task and provides a goal for researchers to work towards.
 - **Reuseable for other tasks.** While it originated as a classification dataset, ImageNet has also served as the foundation for a wider variety of tasks, such as object (bounding box) detection and image generation (minimize negative log likelihood).
@@ -254,9 +262,11 @@ There are also several other advantages of EmpathyNet, which we list below.
 
 **Multimodal.** Compared to purely textual or purely image-based datasets, EmpathyNet is multimodal, which seems suitable in the context of ethics. 
 
-**Inclusive.** If we gather the data for EmpathyNet using movies, documentaries and videos from online platforms (see Section [5](#5-making-empathynet)), then there is a good chance that the dataset is inclusive across races, nationalities and age groups.
+**Inclusive.** If we gather the data for EmpathyNet using movies, documentaries and videos from online platforms (see Section [5](#5-building-empathynet)), then there is a good chance that the dataset is inclusive across races, nationalities and age groups.
 
 **Cost Effective.** Using the method described below, it is possible to generate a large amount of data with relatively low human cost. Furthermore, the data is not ethics-specific and can be used by researchers for other current and future tasks. If the above factors of multimodality and inclusiveness are observed, this dataset might also go a long way towards reducing algorithmic bias in image and audio models.
+
+**Simpler Annotation Agreement.** In Section 2, we mentioned that annotation agreement is a significant challenge for creating an ethics dataset. With EmpathyNet, we sidestep this challenge, since the dataset primarily deals with recognizing and generating social cues, as opposed to deciding if a decision/action is ethical or not. In many ways, the annotation agreement problem is simpler for classifying and matching social cues, as compared to ethical judgements.
 
 ---
 
