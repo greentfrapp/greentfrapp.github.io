@@ -8,7 +8,7 @@ comments: True
 ---
 
 <div class='note note-left'>
-	This is adapted from my submission to the <a href='https://www.herox.com/EthicsNet'>EthicsNet Challenge</a> hosted on <a href='https://www.herox.com'>HeroX</a>. See my full submission <a href='https://headlesselephant.com/archive/20180824_ethicsnet.pdf'>here</a>!
+	This is adapted from my submission to the <a href='https://www.herox.com/EthicsNet'>EthicsNet Guardians' Challenge</a> hosted on <a href='https://www.herox.com'>HeroX</a>, which received an Honourable Contender prize! See my full submission <a href='https://headlesselephant.com/archive/20180824_ethicsnet.pdf'>here</a>.
 </div>
 
 *A green paper typically refers to a draft or tentative proposal with the intention of facilitating consultation and discussion.*
