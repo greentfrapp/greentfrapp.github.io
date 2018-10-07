@@ -34,6 +34,36 @@ Then we just define a `<div>` element that will contain our map:
 
 Then we just have to write some simple Javascript to load the map.
 
+We will be creating a simple map centered around my current university, Singapore University of Technology and Design. The map will have two layers, a satellite view and a regular map view, which we will call 'Satellite' and 'Streets' respectively.
+
+In order to use Leaflet, it will be best if you also sign up for an account with [Mapbox](https://www.mapbox.com/), which provides the layers for Leaflet. After signing up, go to the [Account](https://www.mapbox.com/account/) page to get your API key, which will allow you to retrieve Mapbox maps and create custom maps.
+
+In the meantime, you can use the default API key below, which is also used in Leaflet's tutorials.
+
+We will also be using some default styles, which can be found [here](https://www.mapbox.com/api-documentation/#styles). Specifically, we will be using the `satellite-streets-v10` and `light-v9` styles.
+
+Let's define some variables for the map.
+
+{% highlight javascript %}
+// This is your API key
+var apiKey = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+// This refers to the layer IDs that we want to retrieve from Mapbox
+var layerIds = [
+	'satellite-streets-v10',
+	'light-v9',
+]
+// This refers to the names that we will see in the legend
+var layerNames = [
+	'Satellite',
+	'Streets',
+]
+// This defines where the map is centered when the page is first shown
+var center=[1.3453099609309793, 103.95996451377869]
+// This defines the zoom level of the map when the page is first shown
+var zoom=17
+{% endhighlight %}
+
+
 {% highlight html %}
 <script>
 	// This is the attribution data for Leaflet, OpenStreetMap and Mapbox
