@@ -11,3 +11,7 @@ Including implementations, demos and notes.
 - `demo` [Demo of Boundary Attack on Doge and Grumpy Cat](https://github.com/greentfrapp/boundary-attack)
 - `demo` [JS demo of metalearning algorithms MAML and Reptile](https://github.com/greentfrapp/maml-reptile)
 - `implementation` [Reinforcement Learning on Starcraft2](https://github.com/greentfrapp/pysc2-RLagents)
+
+Some Urban Science, Policy and Planning assignments and projects.
+
+- `demo` [Booth Survey on Simei East](https://greentfrapp.github.io/booth-simei/)
