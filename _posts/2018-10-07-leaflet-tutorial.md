@@ -8,7 +8,7 @@ comments: true
 draft: True
 ---
 
-Recently, while working on an assignment for my Urban Science Masters, I came across a wonderful JS library known as [Leaflet](https://leafletjs.com/). Here's a brief guide to getting started with Leaflet, although there are also several [tutorials](https://leafletjs.com/examples.html) on the site.
+Recently, while working on an assignment for my Urban Science Masters, I came across a wonderful JS library known as [Leaflet](https://leafletjs.com/). Here's a quickstart guide to using Leaflet, although there are also several [tutorials](https://leafletjs.com/examples.html) on the site.
 
 *While I generally assume that the reader is familiar with basic HTML, CSS and Javascript, working files are provided for the newcomer.*
 
@@ -113,6 +113,21 @@ var zoom=17
 	L.control.layers(baseMaps).addTo(map);
 </script>
 {% endhighlight %}
+
+You can try adjusting any of the variables mentioned above to customize the map that is displayed.
+
+## Add Custom Shapes
+
+One new thing we will be introducing here is the web app at https://geojson.io. This helps to export any drawings on the map to a geojson format that is readable by Leaflet.
+
+For starters, we can try drawing a rectangle near SUTD. Then just copy the code on the right side and paste into a new file, titled geojson.js. One thing to add is `var blocks = ` at the start of the file.
+
+Next we can go back to our original file in the previous section and import our geojson object.
+
+```
+<script src="geojson.js"></script>
+```
+
 
 
 
