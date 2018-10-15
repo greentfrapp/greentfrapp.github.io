@@ -27,11 +27,11 @@ Of particular signicance are the beautiful maps visualizing geographical wealth 
 >
 > The Social Life of Small Urban Spaces, Whyte, 1979
 
-Nearly a century later, William H. Whyte’s The Social Life of Small Urban Spaces captured pedestrian rituals in public spaces - what is a ectionately known as the ‘sidewalk ballet’ (Jane Jacobs, 1961) - us- ing time-lapse photography and video.
+Nearly a century later, William H. Whyte’s The Social Life of Small Urban Spaces captured pedestrian rituals in public spaces - what is affectionately known as the ‘sidewalk ballet’ (Jane Jacobs, 1961) - using time-lapse photography and video.
 
 In a similar vein, architect and urban designer Jan Gehl focuses on documenting human life - likely emerging from early conversations with his wife Ingrid Mundt, a psychologist (Matan & Newman, 2016).
 
-In this report, I re ect on the structured observation methods of Booth, Whyte and Gehl and consider their place in the 21st century, by adopting similar methods to observe the residents of East Simei.
+In this report, I reflect on the structured observation methods of Booth, Whyte and Gehl and consider their place in the 21st century, by adopting similar methods to observe the residents of East Simei.
 
 > It has been necessary to develop, almost from scratch, special tools for looking at people [...]
 > 
