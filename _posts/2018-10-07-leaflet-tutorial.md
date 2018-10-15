@@ -5,7 +5,7 @@ subtitle: "A list of short-term AI-related problems."
 date:   2018-10-07 00:00:00 +0800
 categories: code
 comments: true
-draft: True
+draft: true
 ---
 
 Recently, while working on an assignment for my Urban Science Masters, I came across a wonderful JS library known as [Leaflet](https://leafletjs.com/). Here's a quickstart guide to using Leaflet, although there are also several [tutorials](https://leafletjs.com/examples.html) on the site.
