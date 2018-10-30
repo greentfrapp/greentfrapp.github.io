@@ -3,7 +3,7 @@ layout: post
 title:  "Smart People in Smart Cities"
 subtitle: "Acknowledging the Agency of Smart City Residents."
 date:   2018-10-02 00:00:00 +0800
-categories: social
+tags: social
 comments: true
 ---
 
