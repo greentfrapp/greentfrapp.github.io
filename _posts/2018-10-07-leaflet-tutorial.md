@@ -25,13 +25,16 @@ comments: true
 	}
 </style>
 
+<div class='note note-left'>
+<b>Note.</b> While using Leaflet, it will be best if you also sign up for an account with <a href="https://www.mapbox.com/">Mapbox</a>, which provides the layers for Leaflet. After signing up, go to the <a href="https://www.mapbox.com/account/">Account</a> page to get your API key, which will allow you to retrieve Mapbox maps and create custom maps. The following examples use a default tutorial API key, which you can substitute with your own.
+</div>
+
 Recently, while working on an assignment for my Urban Science Masters, I came across a wonderful JS library known as [Leaflet](https://leafletjs.com/). Here's a quickstart guide to using Leaflet, although there are also several [tutorials](https://leafletjs.com/examples.html) on the site.
+
 
 *While I generally assume that the reader is familiar with basic HTML, CSS and Javascript, working files are provided for the newcomer. The files are all available at the accompany Github repository [here](https://github.com/greentfrapp/leaflet-tutorial). Just follow the instructions on the repo to access the files.*
 
 ---
-
-**Note.** While using Leaflet, it will be best if you also sign up for an account with [Mapbox](https://www.mapbox.com/), which provides the layers for Leaflet. After signing up, go to the [Account](https://www.mapbox.com/account/) page to get your API key, which will allow you to retrieve Mapbox maps and create custom maps. The following examples use a default tutorial API key, which you can substitute with your own.
 
 ## Get that Map
 
