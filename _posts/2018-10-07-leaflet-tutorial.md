@@ -3,9 +3,8 @@ layout: post
 title:	"Getting Started with Leaflet"
 subtitle: "A tutorial for the Leaflet JS library."
 date:	 2018-10-07 00:00:00 +0800
-categories: code
+tags: code
 comments: true
-draft: true
 ---
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
@@ -109,7 +108,7 @@ You can try adjusting any of the variables mentioned above to customize the map 
 
 ## Add Multiple Layers
 
-*This will follow the `2-multiple-layers.html` file in the Github repository [here](https://github.com/greentfrapp/leaflet-tutorial).*
+*This will follow the `2-layers.html` file in the Github repository [here](https://github.com/greentfrapp/leaflet-tutorial).*
 
 Adding multiple layers is really easy with Leaflet!
 
@@ -151,7 +150,13 @@ This will follow the `3-geojson.html` file in the Github repository [here](https
 
 One new thing we will be introducing here is the web app at http://geojson.io. This helps to export any drawings on the map to a geojson format that is readable by Leaflet.
 
-For starters, we can try drawing a rectangle near SUTD. Then just copy the code on the right side and paste into our html file, prepending it with `var rectangle = `. See below for an example.
+For starters, we can try drawing a rectangle near SUTD.
+
+![Step 1](/assets/leaflet-tutorial/draw_1.png)
+
+![Step 2](/assets/leaflet-tutorial/draw_2.png)
+
+Then just copy the code on the right side and paste into our html file, prepending it with `var rectangle = `. See below for an example. See `3-geojson.html` in the repository for a clearer example.
 
 {% highlight javascript %}
 var rectangle = {
