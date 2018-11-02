@@ -22,15 +22,15 @@ This was an essay/assignment where the topic was to discuss different aspects of
 
 In a 1972 address to the Singapore Press Club, then Minister of Foreign Affairs, S. Rajaratnam, introduced Singapore’s role as a “global city” (Rajaratnam, 1972), citing Toynbee’s Ecumenopolis (Toynbee, 1970). In suggesting that “the world is our hinterland”, Rajaratnam’s speech focused on the economic aspects of the Global City and how Singapore’s participation in the global economy is paramount to the small state’s survival and success. Towards his conclusion, Rajaratnam mentions:
 
-> In this address, I have dealt largely with the economic aspects of Singa- pore as a Global City. But the political, social and cultural implications of being a Global City are no less important. [...] The political, social and cultural problems, I believe, would be far more difficult to tackle.
+> In this address, I have dealt largely with the economic aspects of Singapore as a Global City. But the political, social and cultural implications of being a Global City are no less important. [...] The political, social and cultural problems, I believe, would be far more difficult to tackle.
 >
 > *Rajaratnam, 1972*
 
-Fast-forward nearly fifty years, Singapore has demonstrated enormous skill in navigating the dangerous waters of foreign political relations. As a belated supple- ment to Rajaratnam’s speech and armed with the benefit of hindsight, **I explore the role of foreign political relations in Singapore’s identity as a global city**.
+Fast-forward nearly fifty years, Singapore has demonstrated enormous skill in navigating the dangerous waters of foreign political relations. As a belated supplement to Rajaratnam’s speech and armed with the benefit of hindsight, **I explore the role of foreign political relations in Singapore’s identity as a global city**.
 
 ## Promoting Foreign Trade and Investment
 
-In her 2005 article, *The Global City: Introducing a Concept*, Saskia Sassen in- troduces seven hypotheses, which altogether comprise the “dynamic of dispersal and of centralization” that she describes as globalisation (Sassen, 2005). Specifi- cally, Sassen’s third hypothesis suggests that “specialized service firms engaged in the most complex and globalised markets are subject to agglomeration economies”. Such agglomerations then result in the creation of new producer-services complexes (Sassen, 2012).
+In her 2005 article, *The Global City: Introducing a Concept*, Saskia Sassen introduces seven hypotheses, which altogether comprise the “dynamic of dispersal and of centralization” that she describes as globalisation (Sassen, 2005). Specifically, Sassen’s third hypothesis suggests that “specialized service firms engaged in the most complex and globalised markets are subject to agglomeration economies”. Such agglomerations then result in the creation of new producer-services complexes (Sassen, 2012).
 
 In Singapore’s case, this has taken the form of its specialisation in financial services (Kotkin, 2014). Sassen, in a section on specialisation of cities, attributes this to Singapore ranking as first on important variables including “ease of entry and exit [for businesses]”, “contract enforcement” and “investor protection” (Sassen, 2012).
 
@@ -46,7 +46,7 @@ For Singapore, promoting better international relations goes beyond altruism and
 
 Singapore also participates actively in establishing global regulations such as the United Nations Convention on the Law of the Sea (UNCLOS) (Koh, 1982). Again, this goes beyond altruism. The UNCLOS as an attempt to enforce a safe sea space for maritime activities encourages international maritime trade, which benefits Singapore’s reliance as a Global City on maritime trade.
 
-A second subtler consequence of regulations such as UNCLOS relates to Sin- gapore’s physical vulnerability as a small nation state. Without regulations like UNCLOS, the law of the jungle implies no room for Singapore against the might of larger powers, which relates to the next section on small state survival.
+A second subtler consequence of regulations such as UNCLOS relates to Singapore’s physical vulnerability as a small nation state. Without regulations like UNCLOS, the law of the jungle implies no room for Singapore against the might of larger powers, which relates to the next section on small state survival.
 
 ## Asserting Small State Relevance
 
@@ -54,9 +54,9 @@ In 1992, Singapore led the establishment of the Forum of Small States (FOSS) at 
 
 Both the FOSS and 3G reflect Singapore’s emphasis on acknowledging smaller states. In particular, asserting the relevance of small states is fundamental to Singapore, the small Global City that wishes to play in the global circuits. The alternatives? To be disregarded and excluded from the global arena, or to be manipulated and exploited by larger powers. As S. Jayakumar puts succinctly in the title of his 2015 memoir: ”Be at the table or be on the menu.” (Jayakumar, 2015)
 
-The previous section also raised the UNCLOS as an example of the importance of international rules and regulations to Global City Singapore. Another telling example is Singapore’s declared opposition to the Russian annexation of Crimea (Ministry of Foreign Affairs, 2014). On a deeper level, the opposition of the annex- ation is very personal to Singapore. If superpowers can willy nilly disregard small state sovereignty, what is stopping Singapore from being next on the list?
+The previous section also raised the UNCLOS as an example of the importance of international rules and regulations to Global City Singapore. Another telling example is Singapore’s declared opposition to the Russian annexation of Crimea (Ministry of Foreign Affairs, 2014). On a deeper level, the opposition of the annexation is very personal to Singapore. If superpowers can willy nilly disregard small state sovereignty, what is stopping Singapore from being next on the list?
 
-Singapore’s relevance as a small state is founded on its sovereignty. The Crimea example illustrates Singapore’s assertive response to threats against small state sovereignty. Similarly, Singapore has responded boldly against pressures and threats to its own sovereignty and authority. Singapore’s sentencing of Michael Fay was enforced despite strong pressure from the US. Another significant incident is the capital punishment of the two Indonesian marines for the MacDonald House bomb- ing.
+Singapore’s relevance as a small state is founded on its sovereignty. The Crimea example illustrates Singapore’s assertive response to threats against small state sovereignty. Similarly, Singapore has responded boldly against pressures and threats to its own sovereignty and authority. Singapore’s sentencing of Michael Fay was enforced despite strong pressure from the US. Another significant incident is the capital punishment of the two Indonesian marines for the MacDonald House bombing.
 
 > I want all of you to bear in mind the political and strategic circumstances in 1968. We had just been kicked out of Malaysia. The British had just announced their intention to withdraw their forces from Singapore. We were still fighting a communist insurgency. Can you imagine the guts it took for the leaders in 1968, facing such circumstances, to stand up and do the right thing?
 >
@@ -64,7 +64,7 @@ Singapore’s relevance as a small state is founded on its sovereignty. The Crim
 
 ## Challenges
 
-Internationally, right-wing populist political entities, such as Trump in the US and the Sweden Democrats, have been gaining traction through an appeal to anti- globalisation attitudes. Back in Singapore, local protests against the Population White Paper and negative local sentiments over the Trump-Kim summit echoed similar anti-globalisation and nationalistic sentiments. The lack of local support and understanding could be detrimental to Singapore’s success in the global arena, which would in turn undermine its Global City role. Navigating this domestic dilemma could prove every bit as challenging as a fragile foreign negotiation.
+Internationally, right-wing populist political entities, such as Trump in the US and the Sweden Democrats, have been gaining traction through an appeal to anti-globalisation attitudes. Back in Singapore, local protests against the Population White Paper and negative local sentiments over the Trump-Kim summit echoed similar anti-globalisation and nationalistic sentiments. The lack of local support and understanding could be detrimental to Singapore’s success in the global arena, which would in turn undermine its Global City role. Navigating this domestic dilemma could prove every bit as challenging as a fragile foreign negotiation.
 
 On the foreign Western front, the erratic nature of US leadership has already led to several thorny issues, including the US withdrawal from the Paris Agreement and the latest rejection of globalism by US President Donald Trump at the UN podium (UN Affairs, 2018). Such decisions and declarations go against Singapore’s small state survival instincts and threaten to undermine globalisation initiatives advocated by Singapore.
 
@@ -74,7 +74,7 @@ On the foreign Eastern front, Kausikan and Chan have highlighted possible attemp
 
 Successful foreign relations and Singapore’s role as a Global City reinforce each other in a feedback cycle. Extensive and strong relations with many countries demonstrate Singapore’s openness to foreign investments and pave the way for more FTAs. Singapore as Global City and global financial hub positions it as a first-world country well poised to participate in international discussions.
 
-Its successful foreign relations have been built on foundations of integrity, con- sistency and hard-nosed pragmatism. Yet Singapore’s success is clearly a double- edged sword. Singapore’s reputation has allowed it to play an outsized role in global politics and global economy. However, the same reputation also increases the burden of expectation and reduces Singapore’s margin for error. Singapore’s success also increases its value as a strategic pawn for potential manipulation by larger powers.
+Its successful foreign relations have been built on foundations of integrity, consistency and hard-nosed pragmatism. Yet Singapore’s success is clearly a double-edged sword. Singapore’s reputation has allowed it to play an outsized role in global politics and global economy. However, the same reputation also increases the burden of expectation and reduces Singapore’s margin for error. Singapore’s success also increases its value as a strategic pawn for potential manipulation by larger powers.
 
 > If we want to be a First World oasis, we must produce First World conditions - not just the environment, but facilities, health standards, services, connectivity, security. We just have to keep up with the highest benchmarks that exist at any one time. Then, you are in the game.
 >
