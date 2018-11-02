@@ -31,7 +31,7 @@ Recently, while working on an assignment for my Urban Science Masters, I came ac
 
 ---
 
-Note: While using Leaflet, it will be best if you also sign up for an account with [Mapbox](https://www.mapbox.com/), which provides the layers for Leaflet. After signing up, go to the [Account](https://www.mapbox.com/account/) page to get your API key, which will allow you to retrieve Mapbox maps and create custom maps. The following examples use a default tutorial API key, which you can substitute with your own.
+**Note.** While using Leaflet, it will be best if you also sign up for an account with [Mapbox](https://www.mapbox.com/), which provides the layers for Leaflet. After signing up, go to the [Account](https://www.mapbox.com/account/) page to get your API key, which will allow you to retrieve Mapbox maps and create custom maps. The following examples use a default tutorial API key, which you can substitute with your own.
 
 ## Get that Map
 
