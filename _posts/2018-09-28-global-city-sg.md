@@ -7,9 +7,9 @@ tags: social
 comments: true
 ---
 
+<div class='note note-left'>
 This was an essay/assignment where the topic was to discuss different aspects of Singapore as a Global City.
-
----
+</div>
 
 > When you got skin the game  
 > You stay in the game  

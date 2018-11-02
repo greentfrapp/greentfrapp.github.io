@@ -7,9 +7,9 @@ tags: social
 comments: true
 ---
 
+<div class='note note-left'>
 This was an essay/assignment written in response to a class reading: [Smart cities: Utopia or neoliberal ideology?](https://www.sciencedirect.com/science/article/pii/S0264275116308812) by Giuseppe and Pianezzi.
-
----
+</div>
 
 > "Do you mean that the public is a different thing from the people you just see walking about the place? The public thinks big, sensible, measured thoughts while people run around doing silly things?"
 >
