@@ -11,7 +11,6 @@ comments: true
 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin="">
 </script>
 <style>
-	/* Here we decide the size of the map */
 	div.map {
 		height: 500px;
 		width: 500px;
@@ -28,7 +27,7 @@ comments: true
 
 Recently, while working on an assignment for my Urban Science Masters, I came across a wonderful JS library known as [Leaflet](https://leafletjs.com/). Here's a quickstart guide to using Leaflet, although there are also several [tutorials](https://leafletjs.com/examples.html) on the site.
 
-*While I generally assume that the reader is familiar with basic HTML, CSS and Javascript, working files are provided for the newcomer.*
+*While I generally assume that the reader is familiar with basic HTML, CSS and Javascript, working files are provided for the newcomer. The files are all available at the accompany Github repository [here](https://github.com/greentfrapp/leaflet-tutorial). Just follow the instructions on the repo to access the files.*
 
 ---
 
@@ -36,7 +35,7 @@ Note: While using Leaflet, it will be best if you also sign up for an account wi
 
 ## Get that Map
 
-*This will follow the `1-basic.html` file in the Github repository [here](https://github.com/greentfrapp/leaflet-tutorial).*
+*This will follow the `1-basic.html` file in the Github repository. Source code [here](https://github.com/greentfrapp/leaflet-tutorial/blob/master/1-basic.html) and sample page [here](https://greentfrapp.github.io/leaflet-tutorial/1-basic.html)*
 
 We start with displaying a simple map with Leaflet.
 
@@ -108,7 +107,7 @@ You can try adjusting any of the variables mentioned above to customize the map 
 
 ## Add Multiple Layers
 
-*This will follow the `2-layers.html` file in the Github repository [here](https://github.com/greentfrapp/leaflet-tutorial).*
+*This will follow the `2-layers.html` file in the Github repository. Source code [here](https://github.com/greentfrapp/leaflet-tutorial/blob/master/2-layers.html) and sample page [here](https://greentfrapp.github.io/leaflet-tutorial/2-layers.html)*
 
 Adding multiple layers is really easy with Leaflet!
 
@@ -146,7 +145,7 @@ Notice in the above map that the names of the layers in the control menu corresp
 
 ## Add Custom Shapes
 
-This will follow the `3-geojson.html` file in the Github repository [here](https://github.com/greentfrapp/leaflet-tutorial).
+*This will follow the `3-geojson.html` file in the Github repository. Source code [here](https://github.com/greentfrapp/leaflet-tutorial/blob/master/3-geojson.html) and sample page [here](https://greentfrapp.github.io/leaflet-tutorial/3-geojson.html)*
 
 One new thing we will be introducing here is the web app at http://geojson.io. This helps to export any drawings on the map to a geojson format that is readable by Leaflet.
 
@@ -228,7 +227,7 @@ var geojson = L.geoJson(rectangle, params).addTo(map)
 
 ## Hover and Highlight Shapes
 
-This will follow the `4-highlight.html` file in the Github repository [here](https://github.com/greentfrapp/leaflet-tutorial).
+*This will follow the `4-highlight.html` file in the Github repository. Source code [here](https://github.com/greentfrapp/leaflet-tutorial/blob/master/4-highlight.html) and sample page [here](https://greentfrapp.github.io/leaflet-tutorial/4-highlight.html)*
 
 To make the map feel more interactive, we can make a shape respond when the mouse hovers over it.
 
@@ -278,6 +277,8 @@ geojson = L.geoJson(rectangle, params).addTo(map);
 &nbsp;
 
 ## Infobox
+
+*This will follow the `5-infobox.html` file in the Github repository. Source code [here](https://github.com/greentfrapp/leaflet-tutorial/blob/master/5-infobox.html) and sample page [here](https://greentfrapp.github.io/leaflet-tutorial/5-infobox.html)*
 
 We can also add an infobox at the bottom of the map, which changes content when the user hovers over specific shapes.
 
@@ -335,7 +336,9 @@ function highlightFeature(e) {
 
 Then we should have something that looks like the map below! Hovering over the two shapes should change the infobox content.
 
-This also means that you can change what the infobox says by editing the `infobox.innerHTML` part in the code above. Also, you can assign and access different properties of each shape (such as different types of buildings) using the geojson.io webapp, by changing the `number` property to something else, say `buildingType`, which will be accessed by `layer.feature.properties.buildingType` in the code.
+This also means that you can change what the infobox says by editing the `infobox.innerHTML` part in the code above.
+
+In addition, you can assign and access different properties of each shape (such as different types of buildings) using the geojson.io webapp, by changing the `number` property to something else, say `buildingType`, which will be accessed by `layer.feature.properties.buildingType` in the code.
 
 ---
 
@@ -343,6 +346,18 @@ That's it for the tutorial! Hope it helped!
 
 <div id='geojson-infobox' class='map'>
 </div>
+
+&nbsp;
+
+## Bonus!
+
+If you did sign up for a [Mapbox](https://www.mapbox.com/) account, you will also have access to [Mapbox Studio](https://www.mapbox.com/studio/), which allows you to create your own map styles and also browse a gallery of gorgeous styles. Check out some examples below!
+
+![Mapbox gallery style 1](/assets/leaflet-tutorial/mapbox_1.png)
+![Mapbox gallery style 2](/assets/leaflet-tutorial/mapbox_2.png)
+![Mapbox gallery style 3](/assets/leaflet-tutorial/mapbox_3.png)
+
+More on this next time!
 
 <script>
 // Code for #basic
@@ -810,10 +825,3 @@ infobox.onAdd = function (map) {
 };
 infobox.addTo(map);
 </script>
-
-
-
-
-
-
-
