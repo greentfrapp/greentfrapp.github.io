@@ -316,7 +316,7 @@ infobox.addTo(map);
 
 Finally, we just need to amend the `highlightFeature` function to get the map to update the infobox when we hover over the shape. Recall that this function is called whenever we hover over a shape.
 
-We update the HTML of the infobox using the `number` property that we added into the geojson earlier.
+We update the HTML of the infobox using the `number` property that we added into the geojson earlier, which we access using `layer.feature.properties.number`.
 
 {% highlight javascript %}
 function highlightFeature(e) {
@@ -334,6 +334,8 @@ function highlightFeature(e) {
 {% endhighlight %}
 
 Then we should have something that looks like the map below! Hovering over the two shapes should change the infobox content.
+
+This also means that you can change what the infobox says by editing the `infobox.innerHTML` part in the code above. Also, you can assign and access different properties of each shape (such as different types of buildings) using the geojson.io webapp, by changing the `number` property to something else, say `buildingType`, which will be accessed by `layer.feature.properties.buildingType` in the code.
 
 ---
 
