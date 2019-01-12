@@ -15,3 +15,7 @@ Including implementations, demos and notes.
 Some Urban Science, Policy and Planning assignments and projects.
 
 - `demo` [Booth Survey on Simei East](https://greentfrapp.github.io/booth-simei/)
+
+Other projects
+
+- `art` [Project (art)ificial working with artificial intelligence and art](https://greentfrapp.github.io/artificial-main)
