@@ -4,7 +4,7 @@ title: projects.
 permalink: /projects/
 ---
 
-Including implementations, demos and notes.
+Implementations, demos and notes.
 
 - `notes` [Annotations and code exercises for *Deep Learning* by Goodfellow, Courville and Bengio](https://github.com/greentfrapp/deep-learning-book-notes)
 - `notes` [Notes on AI research papers](https://github.com/greentfrapp/deeplearning-papernotes)
@@ -14,6 +14,7 @@ Including implementations, demos and notes.
 
 Some Urban Science, Policy and Planning assignments and projects.
 
+- `explainer` [Project Asimov](https://greentfrapp.github.io/project-asimov/)
 - `demo` [Booth Survey on Simei East](https://greentfrapp.github.io/booth-simei/)
 
 Other projects
