@@ -14,8 +14,9 @@ Implementations, demos and notes.
 
 Some Urban Science, Policy and Planning assignments and projects.
 
-- `explainer` [Project Asimov](https://greentfrapp.github.io/project-asimov/)
-- `demo` [Booth Survey on Simei East](https://greentfrapp.github.io/booth-simei/)
+- `explainer` [Machines Gone Wrong](https://machinesgonewrong.com) - an online primer to algorithmic bias
+- `explainer` [Project Asimov](https://greentfrapp.github.io/project-asimov/) - a prelude to Machines Gone Wrong
+- `map` [Booth Survey on Simei East](https://greentfrapp.github.io/booth-simei/)
 
 Other projects
 
