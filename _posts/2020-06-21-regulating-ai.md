@@ -8,10 +8,8 @@ comments: True
 ---
 
 <div class='note note-left'>
-Some thoughts from recent readings including Clark and Hadfield's <a href="https://arxiv.org/abs/2001.00078">Regulatory Markets for AI Safety</a>, Brundage et al.'s <a href="https://arxiv.org/abs/1802.07228">The Malicious Use of Artificial Intelligence</a> and other related works.
+Some thoughts from recent readings including Clark and Hadfield's <a href="https://arxiv.org/abs/2001.00078">Regulatory Markets for AI Safety</a>, Brundage et al.'s <a href="https://arxiv.org/abs/1802.07228">The Malicious Use of Artificial Intelligence</a> and other related works. I intend to start writing more and will tweet about new posts <a href="https://twitter.com/sweekiat_lim">@sweekiat_lim</a>.
 </div>
-
-## Regulating AI
 
 The *zeitgeist* of the current decade concerning AI ethics revolves around worries of algorithmic bias, privacy violation and black boxes amongst other things. A recurring distinction is the one made between *right* and *wrong*.
 
@@ -21,7 +19,7 @@ The *zeitgeist* of the current decade concerning AI ethics revolves around worri
 
 > It is **wrong** for us to blindly trust algorithmic systems.
 
-Unfortunately, the world is not particularly amenable to individual cries for justice and does not care for right and wrong. But if we understand the world enough, we might try to predict plausible local minima that reality might end up in. Then, figure out what it takes to nudge the world into a more desirable minimum.
+Unfortunately, the world is not particularly amenable to individual cries for justice. But if we understand the world enough, we might try to predict plausible local minima that reality might end up in. Then, figure out what it takes to nudge the world into a more desirable minimum.
 
 From a game theory perspective, what rules do we need so that the equilibrium is desirable? What regulatory framework is likely to emerge for AI technologies and how can we shape it for the better?
 
