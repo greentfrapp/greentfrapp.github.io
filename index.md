@@ -28,6 +28,12 @@ title: home.
 
 ## Publications
 
+[**Visualizing Weights**](https://distill.pub/2020/circuits/visualizing-weights/)
+<br/>
+Chelsea Voss, Nick Cammarata, Gabriel Goh, Michael Petrov, Ludwig Schubert, Ben Egan, **Swee Kiat Lim**, Chris Olah
+<br/>
+Distill
+
 [**Few-Shot Regression via Learned Basis Functions**](https://openreview.net/forum?id=r1ldYi9rOV)
 <br/>
 Yi Loo, **Swee Kiat Lim**, Gemma Roig, Ngai-Man Cheung
