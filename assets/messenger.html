@@ -2,6 +2,10 @@
   <body>
     <script>
       console.log('X loaded')
+      document.requestStorageAccess().then(
+        () => { console.log('access granted') },
+        () => { console.log('access denied') }
+      );
       document.hasStorageAccess().then(hasAccess => {
         if (hasAccess) {
             console.log('has access')
