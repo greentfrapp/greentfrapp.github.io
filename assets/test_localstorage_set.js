@@ -5,10 +5,12 @@
 // }
 // window.localStorage.setItem('user', JSON.stringify(person))
 
-const iframe = document.getElementById('messengerIframe')
-iframe.contentWindow.postMessage({
-  action: 'save',
-  key: 'key',
-  value: 'hello world'
-})
-console.log('value set')
+window.onload = () => {
+  const iframe = document.getElementById('messengerIframe')
+  iframe.contentWindow.postMessage({
+    action: 'save',
+    key: 'key',
+    value: 'hello world'
+  })
+  console.log('value set')
+}
