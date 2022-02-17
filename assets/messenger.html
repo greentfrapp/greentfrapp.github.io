@@ -1,11 +1,14 @@
 <html>
   <body>
+    <button onclick="getAccess">Test</button>
     <script>
       console.log('X loaded')
-      document.requestStorageAccess().then(
-        () => { console.log('access granted') },
-        () => { console.log('access denied') }
-      );
+      let getAccess = () => {
+        document.requestStorageAccess().then(
+          () => { console.log('access granted') },
+          () => { console.log('access denied') }
+        )
+      }
       document.hasStorageAccess().then(hasAccess => {
         if (hasAccess) {
             console.log('has access')
