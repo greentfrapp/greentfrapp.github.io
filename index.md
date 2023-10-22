@@ -65,9 +65,3 @@ Annual Meeting of the Association for Computational Linguistics (ACL) 2017
 Adam Marinovic, **Swee Kiat Lim**, Steve Dunn, Maria‐Magdalena Titirici, Joe Briscoe
 <br/>
 ChemSusChem 10.5 (2017): 1004-1013.
-
-## News
-
-- Awarded the Commendation Prize at the 2019 NTU Global Digital Art Prize for [Judgement](https://blogs.ntu.edu.sg/gdap/project/judgement/)
-- Completed my MSc in Urban Science, Policy and Planning with my thesis [Machines Gone Wrong](https://machinesgonewrong.com)
-- Moderated a panel on AI start-ups at Echelon Asia Summit 2017 ([link](https://e27.co/ai-startups-need-to-communicate-the-extend-of-their-tech-20170629/))
