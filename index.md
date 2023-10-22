@@ -30,9 +30,9 @@ title: home.
 
 [**Neural, Neural Everywhere: Controlled Generation Meets Scaffolded, Structured Dialogue**](https://trentonchang.org/files/alexa_prize_report.pdf)
 <br/>
-Ethan A Chi, Caleb Chiam, Trenton Chang, **Swee Kiat Lim**, Chetanya Rastogi, Alexander Iyabor, Yutong He, Hari Sowrirajan, Avanika Narayan, Jillian Tang, Haojun Li, Ashwin Paranjape, Christopher D Manning, NLP Stanford
+Ethan A Chi, Caleb Chiam, Trenton Chang, **Swee Kiat Lim**, Chetanya Rastogi, Alexander Iyabor, Yutong He, Hari Sowrirajan, Avanika Narayan, Jillian Tang, Haojun Li, Ashwin Paranjape, Christopher D Manning
 <br/>
-Distill
+Alexa Prize 2021 Proceedings
 
 [**Visualizing Weights**](https://distill.pub/2020/circuits/visualizing-weights/)
 <br/>
