@@ -28,6 +28,12 @@ title: home.
 
 ## Publications
 
+[**Neural, Neural Everywhere: Controlled Generation Meets Scaffolded, Structured Dialogue**](https://trentonchang.org/files/alexa_prize_report.pdf)
+<br/>
+Ethan A Chi, Caleb Chiam, Trenton Chang, **Swee Kiat Lim**, Chetanya Rastogi, Alexander Iyabor, Yutong He, Hari Sowrirajan, Avanika Narayan, Jillian Tang, Haojun Li, Ashwin Paranjape, Christopher D Manning, NLP Stanford
+<br/>
+Distill
+
 [**Visualizing Weights**](https://distill.pub/2020/circuits/visualizing-weights/)
 <br/>
 Chelsea Voss, Nick Cammarata, Gabriel Goh, Michael Petrov, Ludwig Schubert, Ben Egan, **Swee Kiat Lim**, Chris Olah
