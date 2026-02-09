@@ -1,7 +1,7 @@
 ---
 date: '2026-02-08T14:47:00+08:00'
 draft: false
-title: 'Running is different from writing. Or maybe not.'
+title: 'running is different from writing. or maybe not.'
 ---
 
 Roughly a year ago, I found out how to keep running [^1]. Now I regularly run 60 to 70km a week and it rarely feels like a chore.
